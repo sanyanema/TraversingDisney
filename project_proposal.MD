@@ -16,3 +16,6 @@ To make sure everyone does equal work, every member will contribute between 3-5 
 Conflict Resolution
 All conflicts within the team will be decided by a polite, honest conversation amongst the entire team with no judgment to be made.
 There will be creative problem-solving and accountability when a problem rises but we will actively listen to one another’s thoughts 
+
+Signed by:
+Sanya Nema
