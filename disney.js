@@ -13,8 +13,14 @@ const DisneyWorldMagicKingdom = new Themeparks.Parks.WaltDisneyWorldMagicKingdom
 // Access wait times by Promise
 const CheckWaitTimes = () => {
     DisneyWorldMagicKingdom.GetWaitTimes().then((rideTimes) => {
+        const obj = JSON.stringify(rideTimes);
+        //onsole.log(obj);
+        console.log(obj.length);
         rideTimes.forEach((ride) => {
-            console.log(`${ride.name}: ${ride.waitTime} minutes wait (${ride.status})`);
+            //console.log(`${ride.name}, ${ride.waitTime}, (${ride.status})`);
+            //console.log(ride.longitude);
+            
+            //console.log(ride);
         });
     }).catch((error) => {
         console.error(error);
