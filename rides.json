@@ -104,8 +104,6 @@
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5794086456,
-      "latitude": 28.4182868839,
       "entityId": "72c7343a-f7fb-4f66-95df-c91016de7338",
       "singleRider": false,
       "returnTime": {
@@ -120,13 +118,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:36:05.725Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5794086456,
+    "latitude": 28.4182868839
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5820392026,
-      "latitude": 28.4204816402,
       "entityId": "f5aad2d4-a419-4384-bd9a-42f86385c750",
       "singleRider": false,
       "returnTime": {
@@ -141,13 +139,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:03:04.368Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5820392026,
+    "latitude": 28.4204816402
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5834393157,
-      "latitude": 28.41797818,
       "entityId": "796b0a25-c51e-456e-9bb8-50a324e301b3",
       "singleRider": false,
       "returnTime": {
@@ -162,13 +160,13 @@
     "waitTime": 10,
     "fastPass": false,
     "lastUpdate": "2021-12-03T05:08:51.069Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5834393157,
+    "latitude": 28.41797818
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.584225,
-      "latitude": 28.4179699,
       "entityId": "352feb94-e52e-45eb-9c92-e4b44c6b1a9d",
       "singleRider": false,
       "returnTime": {
@@ -183,13 +181,13 @@
     "waitTime": 10,
     "fastPass": false,
     "lastUpdate": "2021-12-03T03:47:20.279Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.584225,
+    "latitude": 28.4179699
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5789473057,
-      "latitude": 28.420509033,
       "entityId": "890fa430-89c0-4a3f-96c9-11597888005e",
       "singleRider": false,
       "returnTime": {
@@ -204,13 +202,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:52:47.637Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5789473057,
+    "latitude": 28.420509033
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.583472,
-      "latitude": 28.41843,
       "entityId": "96455de6-f4f1-403c-9391-bf8396979149",
       "singleRider": false,
       "returnTime": {
@@ -225,13 +223,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:03:10.554Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.583472,
+    "latitude": 28.41843
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5814839853,
-      "latitude": 28.4200304909,
       "entityId": "7c5e1e02-3a44-4151-9005-44066d5ba1da",
       "singleRider": false,
       "returnTime": {
@@ -246,13 +244,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-03T01:00:53.492Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5814839853,
+    "latitude": 28.4200304909
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.580266,
-      "latitude": 28.420212,
       "entityId": "0d94ad60-72f0-4551-83a6-ebaecdd89737",
       "singleRider": false,
       "returnTime": {
@@ -267,13 +265,13 @@
     "waitTime": 10,
     "fastPass": false,
     "lastUpdate": "2021-12-03T04:37:26.179Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.580266,
+    "latitude": 28.420212
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.58428,
-      "latitude": 28.419503,
       "entityId": "4bef7560-ed81-47c7-b178-6544abe3daaf",
       "singleRider": false
     },
@@ -283,13 +281,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-03T01:05:26.175Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.58428,
+    "latitude": 28.419503
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5823248578,
-      "latitude": 28.4194484171,
       "entityId": "2ebfb38c-5cb5-4de1-86c0-f7af14188022",
       "singleRider": false
     },
@@ -299,13 +297,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-03T01:03:07.356Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5823248578,
+    "latitude": 28.4194484171
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.579033,
-      "latitude": 28.418155,
       "entityId": "ffcfeaa2-1416-4920-a1ed-543c1a1695c4",
       "singleRider": false
     },
@@ -315,13 +313,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:03:05.041Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.579033,
+    "latitude": 28.418155
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5815081252,
-      "latitude": 28.4168698711,
       "entityId": "888fb4a4-7adf-47a1-8ba2-c258cc64fd75",
       "singleRider": false
     },
@@ -331,13 +329,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-04-05T15:32:47.461Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5815081252,
+    "latitude": 28.4168698711
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.581216,
-      "latitude": 28.417436,
       "entityId": "cf9d12fb-1e06-4c8e-ae6f-1e7f1e5c861c",
       "singleRider": false
     },
@@ -347,13 +345,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": null,
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.581216,
+    "latitude": 28.417436
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5827982677,
-      "latitude": 28.4184325517,
       "entityId": "30fe3c64-af71-4c66-a54b-aa61fd7af177",
       "singleRider": false
     },
@@ -363,13 +361,13 @@
     "waitTime": null,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:03:08.730Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5827982677,
+    "latitude": 28.4184325517
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5790083064,
-      "latitude": 28.4180310951,
       "entityId": "8183f3f2-1b59-4b9c-b634-6a863bdf8d84",
       "singleRider": false
     },
@@ -379,13 +377,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-03T01:05:26.334Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5790083064,
+    "latitude": 28.4180310951
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.583738382,
-      "latitude": 28.4182264646,
       "entityId": "6fd1e225-53a0-4a80-a577-4bbc9a471075",
       "singleRider": false
     },
@@ -395,13 +393,14 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-03T01:03:13.270Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.583738382,
+    "latitude": 28.4182264646
+
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5811809,
-      "latitude": 28.4194549043,
       "entityId": "90d79335-c907-4069-a021-d0fe1ec73ae2",
       "singleRider": false
     },
@@ -411,13 +410,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": null,
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5811809,
+    "latitude": 28.4194549043
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5837222887,
-      "latitude": 28.4187861348,
       "entityId": "0f57cecf-5502-4503-8bc3-ba84d3708ace",
       "singleRider": false
     },
@@ -427,13 +426,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-03T01:03:06.833Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5837222887,
+    "latitude": 28.4187861348
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.581204,
-      "latitude": 28.416543,
       "entityId": "e39b831b-7731-49bb-815b-289b4f49a9fd",
       "singleRider": false
     },
@@ -443,13 +442,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": null,
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.581204,
+    "latitude": 28.416543
   },
 {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5846422864,
-      "latitude": 28.4199638504,
       "entityId": "de3309ca-97d5-4211-bffe-739fed47e92f",
       "singleRider": false,
       "returnTime": {
@@ -464,13 +463,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T04:17:29.029Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5846422864,
+    "latitude": 28.4199638504 
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.58031,
-      "latitude": 28.42037,
       "entityId": "9d4d5229-7142-44b6-b4fb-528920969a2c",
       "singleRider": false
     },
@@ -480,13 +479,13 @@
     "waitTime": 40,
     "fastPass": false,
     "lastUpdate": "2021-12-03T05:05:00.139Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.58031,
+    "latitude": 28.42037
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.579302,
-      "latitude": 28.419368,
       "entityId": "f163ddcd-43e1-488d-8276-2381c1db0a39",
       "singleRider": false,
       "returnTime": {
@@ -501,13 +500,13 @@
     "waitTime": null,
     "fastPass": false,
     "lastUpdate": "2021-12-03T05:17:41.699Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.579302,
+    "latitude": 28.419368
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.58498,
-      "latitude": 28.419418,
       "entityId": "a5241f3b-4ab5-4902-b5ba-435132ef553d",
       "singleRider": false,
       "returnTime": {
@@ -522,13 +521,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:12:49.791Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.58498,
+    "latitude": 28.419418
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5827982677,
-      "latitude": 28.4195563399,
       "entityId": "15700490-3749-45cf-a737-3cba56e13704",
       "singleRider": false
     },
@@ -538,13 +537,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-03T01:05:25.281Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5827982677,
+    "latitude": 28.4195563399
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5832274211,
-      "latitude": 28.4187637244,
       "entityId": "365816dc-e99c-4b55-bafa-ba2cecd3ed96",
       "singleRider": false
     },
@@ -554,13 +553,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": null,
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5832274211,
+    "latitude": 28.4187637244
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5818916811,
-      "latitude": 28.4202640272,
       "entityId": "86a41273-5f15-4b54-93b6-829f140e5161",
       "singleRider": false,
       "returnTime": {
@@ -575,13 +574,13 @@
     "waitTime": 25,
     "fastPass": false,
     "lastUpdate": "2021-12-03T05:03:22.573Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5818916811,
+    "latitude": 28.4202640272
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5781962872,
-      "latitude": 28.4188341691,
       "entityId": "b2260923-9315-40fd-9c6b-44dd811dbe64",
       "singleRider": false
     },
@@ -591,13 +590,13 @@
     "waitTime": null,
     "fastPass": false,
     "lastUpdate": "2021-12-03T05:05:01.067Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5781962872,
+    "latitude": 28.4188341691
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.58288,
-      "latitude": 28.4202,
       "entityId": "2551a77d-023f-4ab1-9a19-8afec0190f39",
       "singleRider": false,
       "returnTime": {
@@ -612,13 +611,13 @@
     "waitTime": 13,
     "fastPass": false,
     "lastUpdate": "2021-12-03T04:20:52.501Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.58288,
+    "latitude": 28.4202
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5797358751,
-      "latitude": 28.4183977566,
       "entityId": "e8f0b426-7645-4ea3-8b41-b94ae7091a41",
       "singleRider": false,
       "returnTime": {
@@ -633,13 +632,13 @@
     "waitTime": 10,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:03:09.085Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5797358751,
+    "latitude": 28.4183977566
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.58093,
-      "latitude": 28.4209906,
       "entityId": "e76c93df-31af-49a5-8e2f-752c76c937c9",
       "singleRider": false
     },
@@ -649,13 +648,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-10-08T02:55:23.809Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.58093,
+    "latitude": 28.4209906
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.584669,
-      "latitude": 28.4183725,
       "entityId": "de737ffc-306b-4f32-8bbb-34e5d370ec8f",
       "singleRider": false
     },
@@ -665,13 +664,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": "2021-12-02T23:03:06.083Z",
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.584669,
+    "latitude": 28.4183725
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.579975,
-      "latitude": 28.4211203,
       "entityId": "3cba0cb4-e2a6-402c-93ee-c11ffcb127ef",
       "singleRider": false,
       "returnTime": {
@@ -686,6 +685,8 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:03:05.570Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.579975,
+    "latitude": 28.4211203
   }
 ]
