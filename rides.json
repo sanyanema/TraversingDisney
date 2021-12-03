@@ -1,21 +1,6 @@
 [
   {
-    "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.5807074858,
-      "latitude": 28.4212491492,
-      "entityId": "e847a8bd-7d21-432b-a7a1-f483517a22b5",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_16660079",
-    "name": "Be Our Guest Restaurant",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-11-30T01:47:50.728Z",
-    "status": "Operating"
-  },
-  {
+
     "meta": {
       "type": "ATTRACTION",
       "longitude": -81.581255,
@@ -350,22 +335,6 @@
   },
   {
     "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.5807276023,
-      "latitude": 28.4169323426,
-      "entityId": "83201c33-ce99-45ae-a595-f47e61d73739",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_90002678",
-    "name": "Tony's Town Square Restaurant",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-12-02T19:29:09.503Z",
-    "status": "Operating"
-  },
-  {
-    "meta": {
       "type": "ATTRACTION",
       "longitude": -81.581216,
       "latitude": 28.417436,
@@ -414,22 +383,6 @@
   },
   {
     "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.5829262845,
-      "latitude": 28.4189329813,
-      "entityId": "697473c5-ae17-4c3f-80c7-09a813248013",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_697473c5-ae17-4c3f-80c7-09a813248013",
-    "name": "The Diamond Horseshoe",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-12-02T22:45:59.347Z",
-    "status": "Operating"
-  },
-  {
-    "meta": {
       "type": "ATTRACTION",
       "longitude": -81.583738382,
       "latitude": 28.4182264646,
@@ -463,27 +416,6 @@
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5798248916,
-      "latitude": 28.4200230397,
-      "entityId": "0aae716c-af13-4439-b638-d75fb1649df3",
-      "singleRider": false,
-      "returnTime": {
-        "state": "FINISHED",
-        "returnEnd": null,
-        "returnStart": null
-      }
-    },
-    "id": "WaltDisneyWorldMagicKingdom_80010162",
-    "name": "Mad Tea Party",
-    "active": true,
-    "waitTime": 5,
-    "fastPass": false,
-    "lastUpdate": "2021-12-03T02:03:05.916Z",
-    "status": "Operating"
-  },
-  {
-    "meta": {
-      "type": "ATTRACTION",
       "longitude": -81.5837222887,
       "latitude": 28.4187861348,
       "entityId": "0f57cecf-5502-4503-8bc3-ba84d3708ace",
@@ -513,55 +445,7 @@
     "lastUpdate": null,
     "status": "Closed"
   },
-  {
-    "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.5826159743,
-      "latitude": 28.4191196055,
-      "entityId": "ae9a4a79-ccf1-4561-9a95-cf83d3007b98",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_90001819",
-    "name": "Liberty Tree Tavern",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-12-02T16:07:36.388Z",
-    "status": "Operating"
-  },
-  {
-    "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.5818970259,
-      "latitude": 28.4181214892,
-      "entityId": "c4b64a31-e855-46a9-9d1a-aa13c99e88af",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_90002660",
-    "name": "The Crystal Palace",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-12-02T16:36:37.901Z",
-    "status": "Operating"
-  },
-  {
-    "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.581101,
-      "latitude": 28.4195,
-      "entityId": "55bdcccc-217b-416c-b8b0-4b6a87d16179",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_90002464",
-    "name": "Cinderella's Royal Table",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-11-27T02:12:07.452Z",
-    "status": "Operating"
-  },
-  {
+{
     "meta": {
       "type": "ATTRACTION",
       "longitude": -81.5846422864,
@@ -711,22 +595,6 @@
   },
   {
     "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.5809394969,
-      "latitude": 28.4180247703,
-      "entityId": "75d43698-162c-47af-a607-e879637dc8e7",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_90002670",
-    "name": "The Plaza Restaurant",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-12-01T16:25:26.456Z",
-    "status": "Operating"
-  },
-  {
-    "meta": {
       "type": "ATTRACTION",
       "longitude": -81.58288,
       "latitude": 28.4202,
@@ -744,22 +612,6 @@
     "waitTime": 13,
     "fastPass": false,
     "lastUpdate": "2021-12-03T04:20:52.501Z",
-    "status": "Operating"
-  },
-  {
-    "meta": {
-      "type": "RESTAURANT",
-      "longitude": -81.582592,
-      "latitude": 28.418491,
-      "entityId": "6ea670b8-3097-4d60-b69c-94e16071da17",
-      "singleRider": false
-    },
-    "id": "WaltDisneyWorldMagicKingdom_18185631",
-    "name": "Jungle Navigation Co. LTD Skipper Canteen",
-    "active": true,
-    "waitTime": null,
-    "fastPass": false,
-    "lastUpdate": "2021-12-03T00:08:49.977Z",
     "status": "Operating"
   },
   {
