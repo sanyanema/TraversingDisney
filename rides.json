@@ -3,8 +3,6 @@
 
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.581255,
-      "latitude": 28.420169,
       "entityId": "273ddb8d-e7b5-4e34-8657-1113f49262a5",
       "singleRider": false
     },
@@ -14,13 +12,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T04:36:05.005Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.581255,
+    "latitude": 28.420169
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5783907473,
-      "latitude": 28.4207661576,
       "entityId": "924a3b2c-6b4b-49e5-99d3-e9dc3f2e8a48",
       "singleRider": false,
       "returnTime": {
@@ -35,13 +33,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T02:03:05.378Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5783907473,
+    "latitude": 28.4207661576
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5789887902,
-      "latitude": 28.4184926179,
       "entityId": "d9d12438-d999-4482-894b-8955fdb20ccf",
       "singleRider": false
     },
@@ -51,13 +49,13 @@
     "waitTime": 5,
     "fastPass": false,
     "lastUpdate": "2021-12-03T05:12:15.221Z",
-    "status": "Operating"
+    "status": "Operating",
+    "longitude": -81.5789887902,
+    "latitude": 28.4184926179
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.5786757124,
-      "latitude": 28.4209221723,
       "entityId": "f010bc01-b450-4476-a5f3-a5f2813104b2",
       "singleRider": false
     },
@@ -67,13 +65,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": null,
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.5786757124,
+    "latitude": 28.4209221723
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.578368,
-      "latitude": 28.420934,
       "entityId": "e40ac396-cbac-43f4-8752-764ed60ccceb",
       "singleRider": false
     },
@@ -83,13 +81,13 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": null,
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.578368,
+    "latitude": 28.420934
   },
   {
     "meta": {
       "type": "ATTRACTION",
-      "longitude": -81.585078,
-      "latitude": 28.41969,
       "entityId": "06c599f9-1ddf-4d47-9157-a992acafc96b",
       "singleRider": false
     },
@@ -99,7 +97,9 @@
     "waitTime": 0,
     "fastPass": false,
     "lastUpdate": null,
-    "status": "Closed"
+    "status": "Closed",
+    "longitude": -81.585078,
+    "latitude": 28.41969
   },
   {
     "meta": {
