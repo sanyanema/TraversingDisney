@@ -1,0 +1,1 @@
+// getter for wait time, latitude, long, name

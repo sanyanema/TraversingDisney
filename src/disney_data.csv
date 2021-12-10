@@ -1,39 +1,39 @@
-meta,id,name,active,waitTime,fastPass,lastUpdate,status,longitude,latitude
-ATTRACTION|273ddb8d-e7b5-4e34-8657-1113f49262a5|false,WaltDisneyWorldMagicKingdom_80010117,Prince Charming Regal Carrousel,true,5,false,2021-12-03T04:36:05.005Z,Operating,-81.581255,28.420169
-ATTRACTION|924a3b2c-6b4b-49e5-99d3-e9dc3f2e8a48|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_16491297,The Barnstormer,true,5,false,2021-12-03T02:03:05.378Z,Operating,-81.5783907473,28.4207661576
-ATTRACTION|d9d12438-d999-4482-894b-8955fdb20ccf|false,WaltDisneyWorldMagicKingdom_80010107,Astro Orbiter,true,5,false,2021-12-03T05:12:15.221Z,Operating,-81.5789887902,28.4184926179
-ATTRACTION|f010bc01-b450-4476-a5f3-a5f2813104b2|false,WaltDisneyWorldMagicKingdom_f010bc01-b450-4476-a5f3-a5f2813104b2,Casey Jr. Splash 'N' Soak Station,false,0,false,,Closed,-81.5786757124,28.4209221723
-ATTRACTION|e40ac396-cbac-43f4-8752-764ed60ccceb|false,WaltDisneyWorldMagicKingdom_16491299,Walt Disney World Railroad - Fantasyland,false,0,false,,Closed,-81.578368,28.420934
-ATTRACTION|06c599f9-1ddf-4d47-9157-a992acafc96b|false,WaltDisneyWorldMagicKingdom_2219610,Walt Disney World Railroad - Frontierland,false,0,false,,Closed,-81.585078,28.41969
-ATTRACTION|72c7343a-f7fb-4f66-95df-c91016de7338|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010114,Buzz Lightyear's Space Ranger Spin,true,5,false,2021-12-03T02:36:05.725Z,Operating,-81.5794086456,28.4182868839
-ATTRACTION|f5aad2d4-a419-4384-bd9a-42f86385c750|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010149,"""it's a small world""",true,5,false,2021-12-03T02:03:04.368Z,Operating,-81.5820392026,28.4204816402
-ATTRACTION|796b0a25-c51e-456e-9bb8-50a324e301b3|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010153,Jungle Cruise,true,10,false,2021-12-03T05:08:51.069Z,Operating,-81.5834393157,28.41797818
-ATTRACTION|352feb94-e52e-45eb-9c92-e4b44c6b1a9d|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010177,Pirates of the Caribbean,true,10,false,2021-12-03T03:47:20.279Z,Operating,-81.584225,28.4179699
-ATTRACTION|890fa430-89c0-4a3f-96c9-11597888005e|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010129,Dumbo the Flying Elephant,true,5,false,2021-12-03T02:52:47.637Z,Operating,-81.5789473057,28.420509033
-ATTRACTION|96455de6-f4f1-403c-9391-bf8396979149|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010210,The Magic Carpets of Aladdin,true,5,false,2021-12-03T02:03:10.554Z,Operating,-81.583472,28.41843
-ATTRACTION|7c5e1e02-3a44-4151-9005-44066d5ba1da|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010170,Mickey's PhilharMagic,false,0,false,2021-12-03T01:00:53.492Z,Closed,-81.5814839853,28.4200304909
-ATTRACTION|0d94ad60-72f0-4551-83a6-ebaecdd89737|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010213,The Many Adventures of Winnie the Pooh,true,10,false,2021-12-03T04:37:26.179Z,Operating,-81.580266,28.420212
-ATTRACTION|4bef7560-ed81-47c7-b178-6544abe3daaf|false,WaltDisneyWorldMagicKingdom_80010220,Tom Sawyer Island,false,0,false,2021-12-03T01:05:26.175Z,Closed,-81.58428,28.419503
-ATTRACTION|2ebfb38c-5cb5-4de1-86c0-f7af14188022|false,WaltDisneyWorldMagicKingdom_80069754,The Hall of Presidents,false,0,false,2021-12-03T01:03:07.356Z,Closed,-81.5823248578,28.4194484171
-ATTRACTION|ffcfeaa2-1416-4920-a1ed-543c1a1695c4|false,WaltDisneyWorldMagicKingdom_80010224,Tomorrowland Transit Authority PeopleMover,true,5,false,2021-12-03T02:03:05.041Z,Operating,-81.579033,28.418155
-ATTRACTION|888fb4a4-7adf-47a1-8ba2-c258cc64fd75|false,WaltDisneyWorldMagicKingdom_80010165,Main Street Vehicles,false,0,false,2021-04-05T15:32:47.461Z,Closed,-81.5815081252,28.4168698711
-ATTRACTION|cf9d12fb-1e06-4c8e-ae6f-1e7f1e5c861c|false,WaltDisneyWorldMagicKingdom_cf9d12fb-1e06-4c8e-ae6f-1e7f1e5c861c,Horses - Disney Animals,false,0,false,,Closed,-81.581216,28.417436
-ATTRACTION|30fe3c64-af71-4c66-a54b-aa61fd7af177|false,WaltDisneyWorldMagicKingdom_80010196,Swiss Family Treehouse,true,,false,2021-12-03T02:03:08.730Z,Operating,-81.5827982677,28.4184325517
-ATTRACTION|8183f3f2-1b59-4b9c-b634-6a863bdf8d84|false,WaltDisneyWorldMagicKingdom_80010232,Walt Disney's Carousel of Progress,false,0,false,2021-12-03T01:05:26.334Z,Closed,-81.5790083064,28.4180310951
-ATTRACTION|6fd1e225-53a0-4a80-a577-4bbc9a471075|false,WaltDisneyWorldMagicKingdom_16124144,Walt Disney's Enchanted Tiki Room,false,0,false,2021-12-03T01:03:13.270Z,Closed,-81.583738382,28.4182264646
-ATTRACTION|90d79335-c907-4069-a021-d0fe1ec73ae2|false,WaltDisneyWorldMagicKingdom_90d79335-c907-4069-a021-d0fe1ec73ae2,Cinderella Castle,false,0,false,,Closed,-81.5811809,28.4194549043
-ATTRACTION|0f57cecf-5502-4503-8bc3-ba84d3708ace|false,WaltDisneyWorldMagicKingdom_80069748,Country Bear Jamboree,false,0,false,2021-12-03T01:03:06.833Z,Closed,-81.5837222887,28.4187861348
-ATTRACTION|e39b831b-7731-49bb-815b-289b4f49a9fd|false,WaltDisneyWorldMagicKingdom_80010230,"Walt Disney World Railroad - Main Street, U.S.A.",false,0,false,,Closed,-81.581204,28.416543
-ATTRACTION|de3309ca-97d5-4211-bffe-739fed47e92f|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010110,Big Thunder Mountain Railroad,true,5,false,2021-12-03T04:17:29.029Z,Operating,-81.5846422864,28.4199638504
-ATTRACTION|9d4d5229-7142-44b6-b4fb-528920969a2c|false,WaltDisneyWorldMagicKingdom_16767284,Seven Dwarfs Mine Train,true,40,false,2021-12-03T05:05:00.139Z,Operating,-81.58031,28.42037
-ATTRACTION|f163ddcd-43e1-488d-8276-2381c1db0a39|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010222,Tomorrowland Speedway,true,,false,2021-12-03T05:17:41.699Z,Operating,-81.579302,28.419368
-ATTRACTION|a5241f3b-4ab5-4902-b5ba-435132ef553d|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010192,Splash Mountain,true,5,false,2021-12-03T02:12:49.791Z,Operating,-81.58498,28.419418
-ATTRACTION|15700490-3749-45cf-a737-3cba56e13704|false,WaltDisneyWorldMagicKingdom_80010160,Liberty Square Riverboat,false,0,false,2021-12-03T01:05:25.281Z,Closed,-81.5827982677,28.4195563399
-ATTRACTION|365816dc-e99c-4b55-bafa-ba2cecd3ed96|false,WaltDisneyWorldMagicKingdom_365816dc-e99c-4b55-bafa-ba2cecd3ed96,Frontierland Shootin' Arcade,false,0,false,,Closed,-81.5832274211,28.4187637244
-ATTRACTION|86a41273-5f15-4b54-93b6-829f140e5161|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010176,Peter Pan's Flight,true,25,false,2021-12-03T05:03:22.573Z,Operating,-81.5818916811,28.4202640272
-ATTRACTION|b2260923-9315-40fd-9c6b-44dd811dbe64|false,WaltDisneyWorldMagicKingdom_80010190,Space Mountain,true,,false,2021-12-03T05:05:01.067Z,Operating,-81.5781962872,28.4188341691
-ATTRACTION|2551a77d-023f-4ab1-9a19-8afec0190f39|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_80010208,Haunted Mansion,true,13,false,2021-12-03T04:20:52.501Z,Operating,-81.58288,28.4202
-ATTRACTION|e8f0b426-7645-4ea3-8b41-b94ae7091a41|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_136550,Monsters Inc. Laugh Floor,true,10,false,2021-12-03T02:03:09.085Z,Operating,-81.5797358751,28.4183977566
-ATTRACTION|e76c93df-31af-49a5-8e2f-752c76c937c9|false,WaltDisneyWorldMagicKingdom_16767276,Enchanted Tales with Belle,false,0,false,2021-10-08T02:55:23.809Z,Closed,-81.58093,28.4209906
-ATTRACTION|de737ffc-306b-4f32-8bbb-34e5d370ec8f|false,WaltDisneyWorldMagicKingdom_17272158,A Pirate's Adventure ~ Treasures of the Seven Seas,false,0,false,2021-12-02T23:03:06.083Z,Closed,-81.584669,28.4183725
-ATTRACTION|3cba0cb4-e2a6-402c-93ee-c11ffcb127ef|false|FINISHED|null|null,WaltDisneyWorldMagicKingdom_16767263,Under the Sea ~ Journey of The Little Mermaid,true,5,false,2021-12-03T02:03:05.570Z,Operating,-81.579975,28.4211203
+name,active,waitTime,status,longitude,latitude
+Prince Charming Regal Carrousel,TRUE,5,Operating,-81.581255,28.420169
+The Barnstormer,TRUE,5,Operating,-81.5783907473,28.4207661576
+Astro Orbiter,TRUE,5,Operating,-81.5789887902,28.4184926179
+Casey Jr. Splash 'N' Soak Station,FALSE,3,Operating,-81.5786757124,28.4209221723
+Walt Disney World Railroad - Fantasyland,FALSE,1,Operating,-81.578368,28.420934
+Walt Disney World Railroad - Frontierland,FALSE,6,Operating,-81.585078,28.41969
+Buzz Lightyear's Space Ranger Spin,TRUE,5,Operating,-81.5794086456,28.4182868839
+"""it's a small world""",TRUE,5,Operating,-81.5820392026,28.4204816402
+Jungle Cruise,TRUE,10,Operating,-81.5834393157,28.41797818
+Pirates of the Caribbean,TRUE,10,Operating,-81.584225,28.4179699
+Dumbo the Flying Elephant,TRUE,5,Operating,-81.5789473057,28.420509033
+The Magic Carpets of Aladdin,TRUE,5,Operating,-81.583472,28.41843
+Mickey's PhilharMagic,FALSE,13,Operating,-81.5814839853,28.4200304909
+The Many Adventures of Winnie the Pooh,TRUE,10,Operating,-81.580266,28.420212
+Tom Sawyer Island,FALSE,11,Operating,-81.58428,28.419503
+The Hall of Presidents,FALSE,12,Operating,-81.5823248578,28.4194484171
+Tomorrowland Transit Authority PeopleMover,TRUE,5,Operating,-81.579033,28.418155
+Main Street Vehicles,FALSE,9,Operating,-81.5815081252,28.4168698711
+Horses - Disney Animals,FALSE,10,Operating,-81.581216,28.417436
+Swiss Family Treehouse,TRUE,11,Operating,-81.5827982677,28.4184325517
+Walt Disney's Carousel of Progress,FALSE,7,Operating,-81.5790083064,28.4180310951
+Walt Disney's Enchanted Tiki Room,FALSE,9,Operating,-81.583738382,28.4182264646
+Cinderella Castle,FALSE,10,Operating,-81.5811809,28.4194549043
+Country Bear Jamboree,FALSE,14,Operating,-81.5837222887,28.4187861348
+"Walt Disney World Railroad - Main Street, U.S.A.",FALSE,45,Operating,-81.581204,28.416543
+Big Thunder Mountain Railroad,TRUE,5,Operating,-81.5846422864,28.4199638504
+Seven Dwarfs Mine Train,TRUE,40,Operating,-81.58031,28.42037
+Tomorrowland Speedway,TRUE,21,Operating,-81.579302,28.419368
+Splash Mountain,TRUE,5,Operating,-81.58498,28.419418
+Liberty Square Riverboat,FALSE,12,Operating,-81.5827982677,28.4195563399
+Frontierland Shootin' Arcade,FALSE,18,Operating,-81.5832274211,28.4187637244
+Peter Pan's Flight,TRUE,25,Operating,-81.5818916811,28.4202640272
+Space Mountain,TRUE,10,Operating,-81.5781962872,28.4188341691
+Haunted Mansion,TRUE,13,Operating,-81.58288,28.4202
+Monsters Inc. Laugh Floor,TRUE,10,Operating,-81.5797358751,28.4183977566
+Enchanted Tales with Belle,FALSE,12,Operating,-81.58093,28.4209906
+A Pirate's Adventure ~ Treasures of the Seven Seas,FALSE,13,Operating,-81.584669,28.4183725
+Under the Sea ~ Journey of The Little Mermaid,TRUE,5,Operating,-81.579975,28.4211203
