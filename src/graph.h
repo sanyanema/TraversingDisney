@@ -19,4 +19,5 @@ class Graph {
         size_t getNumEdges() const;
         size_t getNumNodes() const;
     private:
+        std::map<std::string ride, std::vector<Edge> edges>;
 };
