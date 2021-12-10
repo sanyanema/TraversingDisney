@@ -59,9 +59,21 @@ TEST_CASE("BFS maintains the BFS ordering", "[weight=0][part=1][part=1b]") {
 }
 
 TEST_CASE("Produces the correct BFS for the entire dataset") {
-    
+
 }
 
 // Dijikstra's Tests
 
 // Kruskal's Tests
+
+TEST_CASE("Check to see if the list is non-decreasing in terms of their weight") {
+
+}
+
+TEST_CASE("Check to see if it makes sure to not form a cycle") {
+
+}
+
+TEST_CASE("Check to see if the resulting spanning tree has (V-1) edges") {
+    // V means Vertices
+}
