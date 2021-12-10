@@ -1,8 +1,3 @@
-// test to see if our latitude and longitude function works, and check
-// for edge cases
-
-// test the BFS
-
 #include "../cs225/catch/catch.hpp" 
 
 #include <algorithm>
