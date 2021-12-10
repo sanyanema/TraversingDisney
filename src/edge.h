@@ -7,10 +7,11 @@
 
 class Edge {
     public:
-        Edge();
+        Edge(); // set edgeWeight = -1 here initially
         Edge(Node first, Node second);
-        double calculateDistance();
+        double calculateDistance(); // call this in the constructor and set it equal to edgeWeight
         double getEdgeWeight();
     private:
         double edgeWeight;
+        void convertToRadians(double value);
 };

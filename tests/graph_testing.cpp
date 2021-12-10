@@ -1,4 +1,7 @@
 #include "../cs225/catch/catch.hpp" 
+#include "graph.h"
+#include "edge.h"
+#include "node.h"
 
 #include <algorithm>
 #include <iostream>
@@ -8,7 +11,7 @@
 
 // Latitude-Longitude Distance Function Tests
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
-
+    
 }
 
 TEST_CASE("Check to see if distance function produces the correct value - One Pos, One Neg") {
