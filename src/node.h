@@ -8,16 +8,16 @@ class Edge;
 class Node {
     public:
         Node();
-        Node(int waitTime, double latitude, double longitude, std::string name);
+        Node(int wait_time, double latitude, double longitude, std::string name);
         int getWaitTime();
         double getLatitude();
         double getLongitude();
         std::string getName();
     private:
-        int waitTime;
-        double latitude;
-        double longitude;
-        std::string name;
-        std::vector<Edge*> edges; // this is the incident edges for the specific node
+        int wait_time_;
+        double latitude_;
+        double longitude_;
+        std::string name_;
+        std::vector<Edge*> edges_; // this is the incident edges for the specific node
     
 };
