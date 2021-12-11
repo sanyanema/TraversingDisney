@@ -1,4 +1,9 @@
+#pragma once
+
+class Edge;
+
 // getter for wait time, latitude, long, name
+#include "edge.h"
 
 class Node {
     public:
@@ -13,4 +18,6 @@ class Node {
         double latitude;
         double longitude;
         std::string name;
+        std::vector<Edge*> edges; // this is the incident edges for the specific node
+    
 };

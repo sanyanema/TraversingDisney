@@ -21,8 +21,8 @@ Graph* readCSV(std::string filename) {
             getline(comma, longitude, ',');
             getline(comma, latitude, ',');
 
-            Node* n = new Node(ride_name, ...)
-            graph->addNode(n);
+            Node* n = new Node(s);
+            graph->addNode(std::stod(wait_time), std::stod(latitude), std::stod(longitude), ride_name);
         }
     }
 
@@ -30,8 +30,10 @@ Graph* readCSV(std::string filename) {
         for (Node* n2 : graph->getNodes()) {
             if (n1 != n2) {
                 // add edge
+                graph->insertEdge(n1, n2, ); // calculate the distance
             } else {
                 // self edge -- use wait time
+                graph->insertEdge(n1, n2, std::stod(wait_time));
             }
         }
     }
