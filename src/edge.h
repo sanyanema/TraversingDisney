@@ -12,10 +12,13 @@ class Node;
 class Edge {
     public:
         Edge(); // set edgeWeight = -1 here initially
-        Edge(Node* first, Node* second);
-        double calculateDistance(Node* first, Node* second); // call this in the constructor and set it equal to edgeWeight
+        Edge(Node* first, Node* second, double edge_weight);
+        Edge(Node* first, Node* second); // this one sets edgeWeight using the formula
+        double calculateDistance(Node* first_, Node* second_); // call this in the constructor and set it equal to edgeWeight
         double getEdgeWeight();
         Node* getIncident(Node* first); // gets you the edge that comes out of this node
+        Node* getFirstNode();
+        Node* getSecondNode();
     private:
         double edgeWeight;
         void convertToRadians(double value);

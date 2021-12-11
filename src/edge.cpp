@@ -35,3 +35,35 @@ double Edge::calculateDistance(Node* first, Node* second) {
  
     return ans;
 }
+
+Edge::Edge() {
+    edgeWeight = -1;
+}
+
+Edge::Edge(Node* first_, Node* second_, double edge_weight) {
+    first = first_;
+    second = second_;
+    edgeWeight = edge_weight;
+}
+
+Edge::Edge(Node* first_, Node* second_) {
+    first = first_;
+    second = second_;
+    edgeWeight = calculateDistance(first, second);
+}
+
+double Edge::getEdgeWeight() {
+    return edgeWeight;
+}
+
+Node* getIncident(Node* node) {
+    
+}
+
+Node* getFirstNode() {
+    return first;
+}
+
+Node* getSecondNode() {
+    return second;
+}
