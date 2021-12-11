@@ -18,10 +18,10 @@ class Graph {
         void insertEdge(Node* node1, Node* node2, double edgeWeight);
         //void removeEdge(std::string ride1, std::string ride2);
 
-        bool isAdjacent(std::string ride1, std::string ride2) const;
-        std::vector<std::string> getAdjacentVertices(std::string ride) const;
+        bool isAdjacent(Node* ride1, Node* ride2) const;
+        //std::vector<std::string> getAdjacentVertices(std::string ride) const;
 
-        std::vector<std::string> getVertices() const;
+        const std::vector<Node*> & getVertices() const;
         // size_t getNumEdges() const;
         // size_t getNumNodes() const;
 
