@@ -8,8 +8,8 @@
 class Edge {
     public:
         Edge(); // set edgeWeight = -1 here initially
-        Edge(Node first, Node second);
-        double calculateDistance(); // call this in the constructor and set it equal to edgeWeight
+        Edge(Node* first, Node* second);
+        double calculateDistance(Node* first, Node* second); // call this in the constructor and set it equal to edgeWeight
         double getEdgeWeight();
     private:
         double edgeWeight;

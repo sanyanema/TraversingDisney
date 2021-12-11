@@ -1,3 +1,6 @@
 #include "parsing.h"
 
-std::map<std::string, std::pair<
+// We will call this in the
+ readCSV(std::string filename) {
+
+}

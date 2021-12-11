@@ -20,6 +20,8 @@ class Graph {
         std::vector<std::string> getVertices() const;
         size_t getNumEdges() const;
         size_t getNumNodes() const;
+
+        static Graph* readCSV(std::string filename);
     private:
         std::map<std::string ride, std::vector<Edge> edges>;
 };

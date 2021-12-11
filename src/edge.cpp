@@ -7,7 +7,7 @@ void Edge::convertToRadians(double value) {
     return (one_degree * value);
 }
 
-double Edge::calculateDistance(Node first, Node second) {
+double Edge::calculateDistance(Node* first, Node* second) {
     double first_latitude = first.getLatitude();
     double first_longitude = first.getLongitude();
 
