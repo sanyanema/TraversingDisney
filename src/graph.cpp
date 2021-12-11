@@ -1,6 +1,24 @@
 #include "graph.h"
 
-Graph* readCSV(std::string filename) {
+Graph::Graph() {}
+
+void Graph::addNode() {
+
+}
+
+void Graph::addEdge(Node* first, Node* second, double edge_weight) {
+
+}
+
+bool Graph::isAdjacent(Node* first, Node* second) const {
+
+}
+
+const std::vector<Node*> & getVertices() {
+    return vertices;
+}
+
+Graph* Graph::readCSV(std::string filename) {
     Graph* graph = new Graph();
 
     std::ifstream infile(filename);
