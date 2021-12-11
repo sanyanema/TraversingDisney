@@ -40,20 +40,20 @@ Edge::Edge() {
     edgeWeight = -1;
 }
 
-Edge::Edge(Node* first_, Node* second_, double edge_weight) {
-    first = first_;
-    second = second_;
-    edgeWeight = edge_weight;
+Edge::Edge(Node* first, Node* second, double edge_weight) {
+    first_ = first;
+    second_ = second;
+    edge_weight_ = edge_weight;
 }
 
-Edge::Edge(Node* first_, Node* second_) {
-    first = first_;
-    second = second_;
-    edgeWeight = calculateDistance(first, second);
+Edge::Edge(Node* first, Node* second) {
+    first_ = first;
+    second_ = second;
+    edgeWeight = calculateDistance(first_, second_);
 }
 
 double Edge::getEdgeWeight() {
-    return edgeWeight;
+    return edge_weight;
 }
 
 Node* getIncident(Node* node) {
@@ -61,9 +61,9 @@ Node* getIncident(Node* node) {
 }
 
 Node* getFirstNode() {
-    return first;
+    return first_;
 }
 
 Node* getSecondNode() {
-    return second;
+    return second_;
 }
