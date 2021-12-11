@@ -1,7 +1,7 @@
 #include "../cs225/catch/catch.hpp" 
-#include "graph.h"
-#include "edge.h"
-#include "node.h"
+#include "../src/graph.h"
+#include "../src/edge.h"
+#include "../src/node.h"
 
 #include <algorithm>
 #include <iostream>

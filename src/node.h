@@ -3,6 +3,8 @@
 class Edge;
 
 // getter for wait time, latitude, long, name
+#include <string>
+#include <vector>
 #include "edge.h"
 
 class Node {

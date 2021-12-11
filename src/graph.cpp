@@ -2,7 +2,7 @@
 
 Graph::Graph() {}
 
-void Graph::addNode() {
+void Graph::addNode(double wait_time, double latitude, double longitude, std::string name) {
 
 }
 
@@ -11,11 +11,12 @@ void Graph::addEdge(Node* first, Node* second, double edge_weight) {
 }
 
 bool Graph::isAdjacent(Node* first, Node* second) const {
-
+    return false;
 }
 
 const std::vector<Node*> & getVertices() {
-    return vertices;
+    static std::vector<Node*> placeholder;
+    return placeholder;
 }
 
 Graph* Graph::readCSV(std::string filename) {
@@ -30,7 +31,7 @@ Graph* Graph::readCSV(std::string filename) {
         getline(infile, file_line);
 
         while (getline(infile, file_line)) {
-            std::stringstream comma(line);
+            std::stringstream comma(file_line);
 
             getline(comma, ride_name, ',');
             getline(comma, active_status, ',');
@@ -39,20 +40,24 @@ Graph* Graph::readCSV(std::string filename) {
             getline(comma, longitude, ',');
             getline(comma, latitude, ',');
 
-            Node* n = new Node(s);
+            //Node* n = new Node(s);
             graph->addNode(std::stod(wait_time), std::stod(latitude), std::stod(longitude), ride_name);
         }
     }
 
-    for (Node* n1 : graph->getNodes()) {
-        for (Node* n2 : graph->getNodes()) {
-            if (n1 != n2) {
-                // add edge
-                graph->insertEdge(n1, n2, ); // calculate the distance
-            } else {
-                // self edge -- use wait time
-                graph->insertEdge(n1, n2, std::stod(wait_time));
-            }
-        }
-    }
+    // THERE'S A LINKER COMMAND ERROR HERE. 
+    
+    // for (Node* n1 : graph->getNodes()) {
+    //     for (Node* n2 : graph->getNodes()) {
+    //         if (n1 != n2) {
+    //             // add edge
+    //             graph->addEdge(n1, n2, 1.0); // calculate the distance
+    //         } else {
+    //             // self edge -- use wait time
+    //             graph->addEdge(n1, n2, std::stod(wait_time));
+    //         }
+    //     }
+    // }
+
+    return graph;
 }
