@@ -139,7 +139,7 @@ TEST_CASE("Check to see if distance function produces the correct value - One Po
   
   double distance = edge->calculateDistance();
 
-  REQUIRE ( Approx(distance).epsilon(0.01) == 14137.9159003922 );
+  REQUIRE (Approx(distance).epsilon(0.01) == 14137.9159003922);
 }
 
 // ========================================================================
@@ -153,6 +153,27 @@ TEST_CASE("Check to see if distance function produces the correct value - Using 
   double distance = edge->calculateDistance();
 
   REQUIRE ( Approx(distance).epsilon(0.01) == 0.3186387535 );
+}
+// ========================================================================
+// Test: Checking incident of edges going a ride again
+// ========================================================================
+
+
+
+// ========================================================================
+// Test: Checking incident of edges going a ride again
+// ========================================================================
+TEST_CASE("Check to see if the incident function allows for same ride") {
+  //Graph* graph = Graph::readCSV("tests/test_disney_data.csv");
+  Node* first = new Node(1, -81.5783907473, 28.4207661576, "The Barnstormer");
+  Node* second = new Node(1,  -81.5783907473, 28.4207661576, "The Barnstormer");
+  Edge* edge = new Edge(first, second);
+
+  REQUIRE (first->getName() == second->getName());
+
+  /**
+
+  */
 }
 
 // BFS Tests
