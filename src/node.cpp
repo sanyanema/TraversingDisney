@@ -26,3 +26,19 @@ double Node::getLongitude() {
 std::string Node::getName() {
     return name_;
 }
+
+const std::vector<Edge*> getAdjacentEdges() {
+    return edges_;
+}
+
+const std::vector<Node*> getAdjacentNodes() {
+    return nodes_;
+}
+
+void Node::addAdjacentEdge(Edge* e) {
+    edges_.push_back(e);
+}
+
+void Node::addAdjacentNode(Node* n) {
+    nodes_.push_back(n);
+}

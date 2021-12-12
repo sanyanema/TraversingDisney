@@ -65,8 +65,11 @@ void Graph::addEdge(Node* first, Node* second, double edge_weight) {
     Edge* e = new Edge(first, second, edge_weight);
     edges_.push_back(e);
 
-    soruce->addEdge(e);
-    destination->addEdge(e);
+    first->addAdjacentEdge(e);
+    second->addAdjacentEdge(e);
+
+    first->addAdjacentNode(second);
+    second->addAdjacentNode(first);
 }
 
 void Graph::addNode(double wait_time, double latitude, double longitude, std::string name) {
@@ -90,21 +93,31 @@ void Graph::getNode() {
 bool Graph::isAdjacent(Node* first, Node* second) const {
     //location at both
     //true and false statements
-    
-    //make the Nodes two unsigned longs
-    unsigned long nFirst = (unsigned long) first;
-    unsigned long nSecond = (unsigned long) second;
 
     //checks bounds on input rides
     //still have to implement 
 
+    // std::vector<Edge*> first_edges = first.getAdjacentEdges();
+    // std::vector<Edge*> second_edges = second.geAdjacentEdges();
+
+    std::vector<Node*> first_nodes = first.getAdjacentNodes();
+    std::vector<Node*> second_nodes = second.getAdjacentNodes();
+
+    // if you go through the list of adjacent nodes for the first node, and see that the second
+    // node is in this list, that means that the two are adjacent to each other
+
+    for (unsigned i = 0; i < first_nodes.size(); ++i) {
+        if (first_nodes[i] == second) {
+            return true;
+        }
+    }
     return false;
 }
 //call method in .h to get the distance between two points
 double Graph::getEdgeWeight(Node* first, Node* second) {
-        
-        double distance = calculateDistance(first.latitude, first.longitude, second.latitude, second.longitude);
-        return distance;
+    double distance = calculateDistance(first.getLatitude(), first.getLongitude(), 
+                                        second.getLatitude(), second.getLongitude());
+    return distance;
 }
 
 const std::vector<Node*> & getVertices() {
@@ -153,4 +166,10 @@ Graph* Graph::readCSV(std::string filename) {
     // }
 
     return graph;
+}
+
+void printNodes() {
+    for (Node * node : getNodes()) {
+        std::cout << node.getName();
+    }
 }

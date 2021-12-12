@@ -32,7 +32,9 @@ class Graph {
         // size_t getNumNodes() const;
 
         static Graph* readCSV(std::string filename);
-    private:
+
+        void printNodes()
+;    private:
         std::unordered_map<std::string, Node*> vertices;
         std::vector<Edge*> edges;
 };
