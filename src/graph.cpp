@@ -151,31 +151,58 @@ Graph* Graph::readCSV(std::string filename) {
             getline(comma, longitude, ',');
             getline(comma, latitude, ',');
 
-            std::cout << longitude << std::endl;
+            //std::cout << longitude << std::endl;
 
             //Node* n = new Node(s);
             graph->addNode(std::stod(wait_time), std::stod(latitude), std::stod(longitude), ride_name);
         }
     }
+    //graph->printNodes()
     
-    for (pair<string, Node*> n1 : graph->getNodes()) {
-        for (pair<string, Node*> n2 : graph->getNodes()) {
-            if (n1 != n2) {
-                // add edge
-                graph->addEdge(n1.second, n2.second); // calculate the distance
+    // j = isAdjacent
+    // for (int i = 0) {
+    //     for (int j = i; )
+    // }
 
-            } else {
-                // self edge -- use wait time
-                graph->addEdge(n1.second, n2.second, std::stod(wait_time));
-            }
-        }
+    std::vector<Node*> nodes;
+
+    for (pair<string, Node*> n1 : graph->getNodes()) {
+        // add each to a vector
+        nodes.push_back(n1.second);
+        // after loop do above loop and then i can do indexing 
+        
     }
 
-    return graph;
-}
+    for (unsigned i = 0; i < nodes.size(); i++) {
+            for (unsigned j = i; j < nodes.size(); j++) {
+                //for (pair<string, Node*> n2 : graph->getNodes()) {
+                if (nodes[i] != nodes[j]) {
+                    // add edge
+                    graph->addEdge(nodes[i], nodes[j]); // calculate the distance
+
+                } else {
+                    // self edge -- use wait time
+                    graph->addEdge(nodes[i], nodes[j], std::stod(wait_time));
+                }
+            }
+        }
+    
+        return graph;
+    }
+
+    //return graph;
+//}
 
 void Graph::printNodes() {
-    for (auto node : vertices_) {
-        std::cout << node.second->getName();
+    // for (auto node : vertices_) {
+    //     std::cout << node.second->getName();
+    // }
+
+    Node* node = (vertices_.begin()->second);
+
+    //std::vector<Edge*> edges = node->getAdjacentNodes();
+
+    for (auto node1 : node->getAdjacentNodes()) {
+        std::cout << node1->getName() << std::endl;
     }
 }

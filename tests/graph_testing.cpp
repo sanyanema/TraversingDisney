@@ -8,25 +8,26 @@
 #include <string>
 #include <vector>
 
-using namespace csv;
+//using namespace csv;
+using namespace std;
 
 // ========================================================================
 // Test: addNode, addEdges, getNode, getEdges, readCSV
 // ========================================================================
 
 TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
-  int rows;
-  ifstream file("disney_data.csv");
+  int rows = 0;
+  ifstream file("data/disney_data.csv");
   string line;
-  Graph graph = readCSV(disney_data.csv);
-  int numNodes = graph.getNode().size();
-  int numEdges = graph.getEdges().size();
-  int expectedNumNodes = rows - 1;
-  int expectedNumEdges = numNodes;
-  while( getline(file, line) )
+  Graph* graph = Graph::readCSV("data/disney_data.csv");
+  int numNodes = graph->getNodes().size();
+  int numEdges = graph->getEdges().size();
+  while( getline(file, line) ) {
     rows++;
-  REQUIRE( numNodes == expectedNumNodes );
-  REQUIRE( numEdges == expectedNumEdges );
+  }
+    
+  REQUIRE( numNodes == rows-1 );
+  REQUIRE( numEdges == numNodes );
 }
 
 // ========================================================================
@@ -34,10 +35,10 @@ TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
 // ========================================================================
 
 TEST_CASE("Check to see if graph gets deleted.") {
-  Graph graph = readCSV(disney_data.csv);
-  ~Graph();
-  int numNodes = graph.getNode().size();
-  int numEdges = graph.getEdges().size();
+  Graph* graph = Graph::readCSV("data/disney_data.csv");
+  //graph->_delete();
+  int numNodes = graph->getNodes().size();
+  int numEdges = graph->getEdges().size();
   REQUIRE( numNodes == 0 );
   REQUIRE( numEdges == 0 );
 }
@@ -45,7 +46,7 @@ TEST_CASE("Check to see if graph gets deleted.") {
 
 // Latitude-Longitude Distance Function Tests
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
-
+  
 }
 
 TEST_CASE("Check to see if distance function produces the correct value - One Pos, One Neg") {
