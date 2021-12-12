@@ -17,22 +17,17 @@ using namespace std;
 
 TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
   int rows = 0;
-  ifstream file("tests/test_disney_data.csv");
+  ifstream file("data/disney_data.csv");
   string line;
-  Graph* graph = Graph::readCSV("tests/test_disney_data.csv");
-  int numNodes = graph->getNodes().size();
-  int numEdges = graph->getEdges().size();
-  while( getline(file, line) ) {
-    rows++;
-  }
-  
+  Graph graph = readCSV(disney_data.csv);
+  int numNodes = graph.getNode().size();
+  int numEdges = graph.getEdges().size();
   int expectedNumNodes = rows - 1;
-  int minNumEdges = expectedNumNodes - 1;
-  int maxNumEdges = expectedNumNodes * (expectedNumNodes - 1);
+  int expectedNumEdges = numNodes;
+  while( getline(file, line) )
+    rows++;
   REQUIRE( numNodes == expectedNumNodes );
-  REQUIRE( numEdges >= minNumEdges );
-  REQUIRE( numEdges <= maxNumEdges );
-
+  REQUIRE( numEdges == expectedNumEdges );
 }
 
 // ========================================================================
