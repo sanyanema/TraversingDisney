@@ -14,11 +14,12 @@ class Node {
         int getWaitTime();
         double getLatitude();
         double getLongitude();
-        std::string getName();
+        const std::string& getName();
         const std::vector<Edge*> & getAdjacentEdges();
         const std::vector<Node*> & getAdjacentNodes();
         void addAdjacentEdge(Edge* e);
         void addAdjacentNode(Node* n);
+        const std::string& getRideName() { return name_; }
     private:
         int wait_time_;
         double latitude_;

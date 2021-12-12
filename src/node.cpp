@@ -23,15 +23,15 @@ double Node::getLongitude() {
     return longitude_;
 }
 
-std::string Node::getName() {
+const std::string& Node::getName() {
     return name_;
 }
 
-const std::vector<Edge*> getAdjacentEdges() {
+const std::vector<Edge*>& Node::getAdjacentEdges() {
     return edges_;
 }
 
-const std::vector<Node*> getAdjacentNodes() {
+const std::vector<Node*>& Node::getAdjacentNodes() {
     return nodes_;
 }
 

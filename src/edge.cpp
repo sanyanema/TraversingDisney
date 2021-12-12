@@ -2,25 +2,25 @@
 
 // Adapted from https://www.geeksforgeeks.org/program-distance-two-points-earth/
 
-void Edge::convertToRadians(double value) {
+double Edge::convertToRadians(double value) const {
     double one_degree = (M_PI) / 180;
     return (one_degree * value);
 }
 
-double Edge::calculateDistance(Node* first, Node* second) {
-    double first_latitude = first.getLatitude();
-    double first_longitude = first.getLongitude();
+double Edge::calculateDistance(Node* first, Node* second) const {
+    double first_latitude = first->getLatitude();
+    double first_longitude = first->getLongitude();
 
-    double second_latitude = second.getLatitude();
-    double second_longitude = second.getLongitude();
+    double second_latitude = second->getLatitude();
+    double second_longitude = second->getLongitude();
     
     // Haversine Formula
 
-    double dlong = long2 - long1;
-    double dlat = lat2 - lat1;
+    double dlong = second_longitude - first_longitude;
+    double dlat = second_latitude - first_latitude;
  
     double ans = pow(sin(dlat / 2), 2) +
-                     cos(lat1) * cos(lat2) *
+                     cos(first_latitude) * cos(second_latitude) *
                      pow(sin(dlong / 2), 2);
  
     ans = 2 * asin(sqrt(ans));
@@ -37,7 +37,7 @@ double Edge::calculateDistance(Node* first, Node* second) {
 }
 
 Edge::Edge() {
-    edgeWeight = -1;
+    edge_weight_ = -1;
 }
 
 Edge::Edge(Node* first, Node* second, double edge_weight) {
@@ -49,21 +49,25 @@ Edge::Edge(Node* first, Node* second, double edge_weight) {
 Edge::Edge(Node* first, Node* second) {
     first_ = first;
     second_ = second;
-    edgeWeight = calculateDistance(first_, second_);
+    edge_weight_ = calculateDistance(first_, second_);
 }
 
-double Edge::getEdgeWeight() {
-    return edge_weight;
+double Edge::getEdgeWeight() const {
+    return edge_weight_;
 }
 
-Node* getIncident(Node* node) {
-    
+Node* Edge::getIncident(Node* node) const {
+    if (node == second_) {
+        return first_;
+    } else {
+        return second_;
+    }
 }
 
-Node* getFirstNode() {
+Node* Edge::getFirstNode() const {
     return first_;
 }
 
-Node* getSecondNode() {
+Node* Edge::getSecondNode() const {
     return second_;
 }

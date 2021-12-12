@@ -14,14 +14,14 @@ class Edge {
         Edge(); // set edgeWeight = -1 here initially
         Edge(Node* first, Node* second, double edge_weight);
         Edge(Node* first, Node* second); // this one sets edgeWeight using the formula
-        double calculateDistance(Node* first, Node* second); // call this in the constructor and set it equal to edgeWeight
-        double getEdgeWeight();
-        Node* getIncident(Node* first); // gets you the edge that comes out of this node
-        Node* getFirstNode();
-        Node* getSecondNode();
+        double calculateDistance(Node* first, Node* second) const; // call this in the constructor and set it equal to edgeWeight
+        double getEdgeWeight() const;
+        Node* getIncident(Node* first) const; // gets you the edge that comes out of this node
+        Node* getFirstNode() const;
+        Node* getSecondNode() const;
     private:
         double edge_weight_;
-        void convertToRadians(double value);
+        double convertToRadians(double value) const;
         Node* first_;
         Node* second_;
 };

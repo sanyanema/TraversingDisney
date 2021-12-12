@@ -1,5 +1,8 @@
 #include "graph.h"
 
+using std::string;
+using std::pair;
+
 //number of rides
 int count_g = 39;
 
@@ -46,20 +49,19 @@ void Graph::_delete() {
         delete e;
     }
 }
-/**
+
 void Graph::_copy(const Graph& other) {
-    for (pair<string, Node*> v : other.getVertices()) {
-        addVertex(v.second->getAddress());
+    for (pair<string, Node*> v : other.getNodes()) {
+        Node* n = v.second;
+        addNode(n->getWaitTime(), n->getLatitude(), n->getLongitude(), n->getName());
     }
     for (Edge* e : other.getEdges()) {
         addEdge(
-            getVertex(e->getSource()->getAddress()),
-            getVertex(e->getDestination()->getAddress()),
-            e->getValue(), e->getGas(), e->getGasPrice()
+            e->getFirstNode(), e->getSecondNode(), e->getEdgeWeight()
         );
     }
 }
-*/
+
 
 void Graph::addEdge(Node* first, Node* second, double edge_weight) {
     Edge* e = new Edge(first, second, edge_weight);
@@ -72,21 +74,23 @@ void Graph::addEdge(Node* first, Node* second, double edge_weight) {
     second->addAdjacentNode(first);
 }
 
+const std::vector<Edge*>& Graph::getEdges() const {
+    return edges_;
+}
+
 void Graph::addNode(double wait_time, double latitude, double longitude, std::string name) {
     /*
     Node* n = new Node();
-    nodes_.insert(make_pair(address, n));
+    vertices_.insert(make_pair(address, n));
     return n;
 **/
     Node* n = new Node(wait_time, latitude, longitude, name);
+    vertices_.insert(std::make_pair(n->getRideName(), n));
     // insert it
 }
-void Graph::getNode() {
-    /*
-    auto it = node.find(address);
-    return it == node_.end() ? NULL : it->second;
-    **/
-    return rides;
+Node* Graph::getNode(const std::string& name) const {
+    auto it = vertices_.find(name);
+    return it == vertices_.end() ? NULL : it->second;
 }
 
 //Don't know if needed but a getNode but if do implement here
@@ -101,8 +105,8 @@ bool Graph::isAdjacent(Node* first, Node* second) const {
     // std::vector<Edge*> first_edges = first.getAdjacentEdges();
     // std::vector<Edge*> second_edges = second.geAdjacentEdges();
 
-    std::vector<Node*> first_nodes = first.getAdjacentNodes();
-    std::vector<Node*> second_nodes = second.getAdjacentNodes();
+    std::vector<Node*> first_nodes = first->getAdjacentNodes();
+    std::vector<Node*> second_nodes = second->getAdjacentNodes();
 
     // if you go through the list of adjacent nodes for the first node, and see that the second
     // node is in this list, that means that the two are adjacent to each other
@@ -115,15 +119,10 @@ bool Graph::isAdjacent(Node* first, Node* second) const {
     return false;
 }
 //call method in .h to get the distance between two points
-double Graph::getEdgeWeight(Node* first, Node* second) {
-    double distance = calculateDistance(first.getLatitude(), first.getLongitude(), 
-                                        second.getLatitude(), second.getLongitude());
-    return distance;
-}
 
-const std::vector<Node*> & getVertices() {
-    static std::vector<Node*> placeholder;
-    return placeholder;
+
+const std::unordered_map<string, Node*> & Graph::getNodes() const {
+    return vertices_;
 }
 
 Graph* Graph::readCSV(std::string filename) {
@@ -169,8 +168,8 @@ Graph* Graph::readCSV(std::string filename) {
     return graph;
 }
 
-void printNodes() {
-    for (Node * node : getNodes()) {
-        std::cout << node.getName();
+void Graph::printNodes() {
+    for (auto node : vertices_) {
+        std::cout << node.second->getName();
     }
 }
