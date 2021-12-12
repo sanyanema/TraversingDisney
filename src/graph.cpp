@@ -157,7 +157,6 @@ Graph* Graph::readCSV(std::string filename) {
             graph->addNode(std::stod(wait_time), std::stod(latitude), std::stod(longitude), ride_name);
         }
     }
-    graph.printNodes()
     
     for (pair<string, Node*> n1 : graph->getNodes()) {
         for (pair<string, Node*> n2 : graph->getNodes()) {
