@@ -1,5 +1,12 @@
 #include "../cs225/catch/catch.hpp" 
+#include "../src/graph.h"
+#include "../src/edge.h"
+#include "../src/node.h"
 
-// TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
-    
-// }
+#include <algorithm>
+#include <iostream>
+#include <string>
+#include <vector>
+
+//using namespace csv;
+using namespace std;
