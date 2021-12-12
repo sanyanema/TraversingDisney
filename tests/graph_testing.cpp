@@ -16,9 +16,9 @@ using namespace csv;
 
 TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
   int rows;
-  ifstream file("disney_data.csv");
+  ifstream file("tests/test_data_set.csv");
   string line;
-  Graph graph = readCSV(disney_data.csv);
+  Graph graph = readCSV(tests/test_data_set.csv);
   int numNodes = graph.getNode().size();
   int numEdges = graph.getEdges().size();
   int expectedNumNodes = rows - 1;
