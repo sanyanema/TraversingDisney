@@ -11,10 +11,10 @@
 using namespace csv;
 
 // ========================================================================
-// Test: addNode, getNode, getEdges, readCSV
+// Test: addNode, addEdges, getNode, getEdges, readCSV
 // ========================================================================
 
-TEST_CASE("Check to see if destructor ") {
+TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
   int rows;
   ifstream file("disney_data.csv");
   string line;
