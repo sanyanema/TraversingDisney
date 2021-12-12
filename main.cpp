@@ -1,8 +1,10 @@
 #include <iostream>
 
 #include "src/graph.h"
+#include "src/edge.h"
+#include "src/node.h"
 
 int main() {
-    std::cout << "Hello World" << std::endl;
-    return 1;
+    Graph* graph = Graph::readCSV("data/disney_data.csv");
+    graph->printNodes();
 }

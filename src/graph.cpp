@@ -151,12 +151,12 @@ Graph* Graph::readCSV(std::string filename) {
             getline(comma, longitude, ',');
             getline(comma, latitude, ',');
 
+            std::cout << longitude << std::endl;
+
             //Node* n = new Node(s);
             graph->addNode(std::stod(wait_time), std::stod(latitude), std::stod(longitude), ride_name);
         }
     }
-
-    // THERE'S A LINKER COMMAND ERROR HERE. 
     
     for (pair<string, Node*> n1 : graph->getNodes()) {
         for (pair<string, Node*> n2 : graph->getNodes()) {
