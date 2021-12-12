@@ -1,7 +1,7 @@
 #include <iostream>
-//#include "readFromFile.hpp"
+#include "parsing.h"
 
-//include "src/graph.cpp"
+#include "src/graph.h"
 
 int main() {
     std::cout << "Hello World" << std::endl;
