@@ -31,7 +31,13 @@ TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
 // Test: delete/destructor
 // ========================================================================
 
-TEST_CASE("Check to see if destructor ") {
+TEST_CASE("Check to see if graph gets deleted.") {
+  Graph graph = readCSV(disney_data.csv);
+  ~Graph();
+  int numNodes = graph.getNode().size();
+  int numEdges = graph.getEdges().size();
+  REQUIRE( numNodes == 0 );
+  REQUIRE( numEdges == 0 );
 }
 
 
