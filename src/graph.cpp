@@ -90,14 +90,24 @@ void Graph::getNode() {
 bool Graph::isAdjacent(Node* first, Node* second) const {
     //location at both
     //true and false statements
-    
-    //make the Nodes two unsigned longs
-    unsigned long nFirst = (unsigned long) first;
-    unsigned long nSecond = (unsigned long) second;
 
     //checks bounds on input rides
     //still have to implement 
 
+    // std::vector<Edge*> first_edges = first.getEdges();
+    // std::vector<Edge*> second_edges = second.getEdges();
+
+    std::vector<Node*> first_nodes = first.getNodes();
+    std::vector<Node*> second_nodes = second.getNodes();
+
+    // if you go through the list of adjacent nodes for the first node, and see that the second
+    // node is in this list, that means that the two are adjacent to each other
+
+    for (unsigned i = 0; i < first_nodes.size(); ++i) {
+        if (first_nodes[i] == second) {
+            return true;
+        }
+    }
     return false;
 }
 //call method in .h to get the distance between two points
