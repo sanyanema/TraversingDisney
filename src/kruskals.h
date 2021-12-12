@@ -6,3 +6,9 @@
 
 #include "graph.h"
 #include "edge.h"
+
+//skeleton of kruskal's header
+class kruskals {
+    public:
+    private:
+};
