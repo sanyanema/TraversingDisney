@@ -15,10 +15,10 @@ class Node {
         double getLatitude();
         double getLongitude();
         std::string getName();
-        const std::vector<Edge*> & getEdges();
-        const std::vector<Node*> & getNodes();
-        void addEdge(Edge* e);
-        void addNode(Node* n);
+        const std::vector<Edge*> & getAdjacentEdges();
+        const std::vector<Node*> & getAdjacentNodes();
+        void addAdjacentEdge(Edge* e);
+        void addAdjacentNode(Node* n);
     private:
         int wait_time_;
         double latitude_;

@@ -65,11 +65,11 @@ void Graph::addEdge(Node* first, Node* second, double edge_weight) {
     Edge* e = new Edge(first, second, edge_weight);
     edges_.push_back(e);
 
-    first->addEdge(e);
-    second->addEdge(e);
+    first->addAdjacentEdge(e);
+    second->addAdjacentEdge(e);
 
-    first->addNode(second);
-    second->addNode(first);
+    first->addAdjacentNode(second);
+    second->addAdjacentNode(first);
 }
 
 void Graph::addNode(double wait_time, double latitude, double longitude, std::string name) {
@@ -97,11 +97,11 @@ bool Graph::isAdjacent(Node* first, Node* second) const {
     //checks bounds on input rides
     //still have to implement 
 
-    // std::vector<Edge*> first_edges = first.getEdges();
-    // std::vector<Edge*> second_edges = second.getEdges();
+    // std::vector<Edge*> first_edges = first.getAdjacentEdges();
+    // std::vector<Edge*> second_edges = second.geAdjacentEdges();
 
-    std::vector<Node*> first_nodes = first.getNodes();
-    std::vector<Node*> second_nodes = second.getNodes();
+    std::vector<Node*> first_nodes = first.getAdjacentNodes();
+    std::vector<Node*> second_nodes = second.getAdjacentNodes();
 
     // if you go through the list of adjacent nodes for the first node, and see that the second
     // node is in this list, that means that the two are adjacent to each other
@@ -115,10 +115,9 @@ bool Graph::isAdjacent(Node* first, Node* second) const {
 }
 //call method in .h to get the distance between two points
 double Graph::getEdgeWeight(Node* first, Node* second) {
-        
-        double distance = calculateDistance(first.getLatitude(), first.getLongitude(), 
-                                            second.getLatitude(), second.getLongitude());
-        return distance;
+    double distance = calculateDistance(first.getLatitude(), first.getLongitude(), 
+                                        second.getLatitude(), second.getLongitude());
+    return distance;
 }
 
 const std::vector<Node*> & getVertices() {
@@ -167,4 +166,10 @@ Graph* Graph::readCSV(std::string filename) {
     // }
 
     return graph;
+}
+
+void printNodes() {
+    for (Node * node : getNodes()) {
+        std::cout << node.getName();
+    }
 }
