@@ -40,9 +40,6 @@
   <ol>
     <li>
       <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
     </li>
     <li>
       <a href="#installation">Installation</a>
@@ -58,7 +55,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Walt_Disney_World_Logo_2018.svg/2560px-Walt_Disney_World_Logo_2018.svg.png" alt="disneyworld" width="1280" height="238">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Walt_Disney_World_Logo_2018.svg/2560px-Walt_Disney_World_Logo_2018.svg.png" alt="disneyworld" width="640" height="119">
 <!-- [![h][https://static.wikia.nocookie.net/logopedia/images/3/3b/Walt_Disney_World_2005.svg/revision/latest/scale-to-width-down/250?cb=20190327161304](https://static.wikia.nocookie.net/logopedia/images/3/3b/Walt_Disney_World_2005.svg/revision/latest/scale-to-width-down/250?cb=20190327161304) -->
 
 We are using the unofficial API library called wdwJS -- ​​https://github.com/zpocbob/wdwJS. The dataset provides information about various rides in Disney Theme Parks around the world, such as Disney California and Disney Paris. This information includes the individual ride wait times, the schedule for these rides, and which park the ride is located in. We downloaded our data by pulling from the github repository that it was in. We used BFS to work with our dataset because of its queue structure, and are specifically using it to calculate the shortest distance between where the user is and where they would like to be. As for our graph algorithms, we chose to use Djikastra's Algorithm, as well as Kruskal's Algorithm. We used Djikastra's Algorithm to calculate the shortest point between two locations. We used Kruskal's Algorithm to generate the maximum amount of rides that a user can ride within their time contraint, and generate a landmark path for them.
@@ -68,44 +65,19 @@ We are using the unofficial API library called wdwJS -- ​​https://github.com
 
 
 
-### Built With
-
-* [Next.js](https://nextjs.org/
-* [C++](https://laravel.com)
-
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
 ## Installation
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+To get a local version of our project, follow these simple instructions.
 
 ### Dataset
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Our dataset is 
 
 ### Building And Testing
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-3. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -113,10 +85,7 @@ This is an example of how to list things you need to use the software and how to
 
 <!-- USAGE EXAMPLES -->
 ## Features
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
+Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. Key features of our tool are the ability to map a path through the park using landmarks, the 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
