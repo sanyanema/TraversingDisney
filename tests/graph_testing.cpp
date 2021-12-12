@@ -11,6 +11,10 @@
 //using namespace csv;
 using namespace std;
 
+TEST_CASE("Sanity Check") {
+  REQUIRE(true);
+}
+
 // ========================================================================
 // Test: addNode, addEdges, getNode, getEdges, readCSV
 // ========================================================================
@@ -125,6 +129,9 @@ TEST_CASE("Check to see if distance function produces the correct value - Both P
   REQUIRE ( Approx(distance).epsilon(0.01) == 5595.4460665278 ); // kilometers
 }
 
+// ========================================================================
+// Test: Checking distance function with negative and positive values
+// ========================================================================
 TEST_CASE("Check to see if distance function produces the correct value - One Pos, One Neg") {
   Node* first = new Node(1, 81.5, -80.5, "Ride");
   Node* second = new Node(1, -34.5, 30.5, "Ride 2");
@@ -135,6 +142,9 @@ TEST_CASE("Check to see if distance function produces the correct value - One Po
   REQUIRE ( Approx(distance).epsilon(0.01) == 14137.9159003922 );
 }
 
+// ========================================================================
+// Test: Checking distance function with csv data points
+// ========================================================================
 TEST_CASE("Check to see if distance function produces the correct value - Using actual data") {
   Node* first = new Node(1, -81.5783907473, 28.4207661576, "The Barnstormer");
   Node* second = new Node(1, -81.581255, 28.420169, "Prince Charming Regal Carousel");
