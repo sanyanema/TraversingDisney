@@ -7,4 +7,5 @@
 int main() {
     Graph* graph = Graph::readCSV("data/disney_data.csv");
     graph->printNodes();
+    delete graph;
 }
