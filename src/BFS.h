@@ -11,7 +11,7 @@
 class BFS {
 public:
     /* constructor - takes in # of vertices (nodes) */
-    BFS(std::vector<Vertex> v, Vertex s);
+    BFS(std::vector<Node> v, Node* s); //std::vector<Vertex> v, Vertex s
 
     /* second constructor - also takes in a vector of edges */
     BFS(std::vector<Vertex> v, std::vector<Edge> e, Vertex s);
@@ -20,7 +20,7 @@ public:
     ~BFS();
 
     /* helper function to add edge */
-    void addEdge(Vertex v, Vertex w);
+    void addEdge(Node* first, Node* second); //Vertex v, Vertex w
     void addEdge(Edge e);
 
     /* shows the node at the current front of the queue */

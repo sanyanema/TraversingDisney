@@ -8,9 +8,9 @@
 
 
 /* constructor - takes in # of vertices (nodes) and starting vertex */
-BFS::BFS(std::vector<Vertex> v, Vertex s) {
+BFS::BFS(std::vector<Node*> v, Node* s) { //<vertex> v, Vertex s
     for (Vertex i : v) {
-        vertices.push_back(i);
+        nodes.push_back(i);
     }
 
     adj = std::map<Vertex, std::vector<Vertex>>();
@@ -31,7 +31,7 @@ BFS::BFS(std::vector<Vertex> v, std::vector<Edge> e, Vertex s) {
 
     adj = std::map<Vertex, std::vector<Vertex>>();
     for (Edge j : e) {
-        adj[j.source].push_back(j.dest);
+        adj[j.git ].push_back(j.dest);
         adj[j.dest].push_back(j.source);
     }
 
@@ -52,9 +52,9 @@ BFS::~BFS() {
 }
 
  /* helper function to add edge */
-void BFS::addEdge(Vertex v, Vertex w) {
-    adj[v].push_back(w);
-    adj[w].push_back(v);
+void BFS::addEdge(Node* first, Node* second) { //Vertex v, Vertex w
+    adj[first].push_back(second);
+    adj[second].push_back(first);
 }
 
  /* helper function to add edge */
