@@ -9,14 +9,34 @@ class Node;
 #include <string>
 #include "node.h"
 
+/**
+* A base class for the Edge 
+* Taking into account the different variables
+*/
 class Edge {
     public:
-        Edge(); // set edgeWeight = -1 here initially
+        /**
+        * A forward iterator through a Edge
+        * This has the setting of edgeWeight = -1 here initially 
+        */
+        Edge(); 
+        /**
+        * Constructor that intializes variables nodes and edge weight
+        */
         Edge(Node* first, Node* second, double edge_weight);
-        Edge(Node* first, Node* second); // this one sets edgeWeight using the formula
-        double calculateDistance(Node* first, Node* second) const; // call this in the constructor and set it equal to edgeWeight
+        /**
+        * This function sets the edgeWeight using the formula
+        */
+        Edge(Node* first, Node* second); 
+        /**
+        * Calls these variables in a constructor and set it equal to edgeWeight
+        * Also checks 
+        * The getIncident method gives you the edge case that comes out of a node which is ride
+        * If riding the same ride again we add the edgeWeight 
+        */
+        double calculateDistance(Node* first, Node* second) const; 
         double getEdgeWeight() const;
-        Node* getIncident(Node* first) const; // gets you the edge that comes out of this node
+        Node* getIncident(Node* first) const; 
         Node* getFirstNode() const;
         Node* getSecondNode() const;
     private:

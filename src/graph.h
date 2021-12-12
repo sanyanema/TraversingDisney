@@ -32,7 +32,7 @@ class Graph {
         Graph(const Graph& other);
 
         /**
-        *
+        * Equal operator is used to check the balance 
         *
         */
         const Graph& operator=(const Graph& other);
