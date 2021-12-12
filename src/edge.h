@@ -34,7 +34,7 @@ class Edge {
         * The getIncident method gives you the edge case that comes out of a node which is ride
         * If riding the same ride again we add the edgeWeight 
         */
-        double calculateDistance(Node* first, Node* second) const; 
+        double calculateDistance() const; 
         double getEdgeWeight() const;
         Node* getIncident(Node* first) const; 
         Node* getFirstNode() const;
