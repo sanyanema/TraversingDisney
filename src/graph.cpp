@@ -65,8 +65,11 @@ void Graph::addEdge(Node* first, Node* second, double edge_weight) {
     Edge* e = new Edge(first, second, edge_weight);
     edges_.push_back(e);
 
-    soruce->addEdge(e);
-    destination->addEdge(e);
+    first->addEdge(e);
+    second->addEdge(e);
+
+    first->addNode(second);
+    second->addNode(first);
 }
 
 void Graph::addNode(double wait_time, double latitude, double longitude, std::string name) {
@@ -113,7 +116,8 @@ bool Graph::isAdjacent(Node* first, Node* second) const {
 //call method in .h to get the distance between two points
 double Graph::getEdgeWeight(Node* first, Node* second) {
         
-        double distance = calculateDistance(first.latitude, first.longitude, second.latitude, second.longitude);
+        double distance = calculateDistance(first.getLatitude(), first.getLongitude(), 
+                                            second.getLatitude(), second.getLongitude());
         return distance;
 }
 

@@ -34,3 +34,11 @@ const std::vector<Edge*> getEdges() {
 const std::vector<Node*> getNodes() {
     return nodes_;
 }
+
+void Node::addEdge(Edge* e) {
+    edges_.push_back(e);
+}
+
+void Node::addNode(Node* n) {
+    nodes_.push_back(n);
+}
