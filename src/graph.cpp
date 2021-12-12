@@ -78,7 +78,8 @@ void Graph::addNode(double wait_time, double latitude, double longitude, std::st
     nodes_.insert(make_pair(address, n));
     return n;
 **/
-    return addNode(wait_time, latitude, longitude, name);
+    Node* n = new Node(wait_time, latitude, longitude, name);
+    // insert it
 }
 void Graph::getNode() {
     /*
