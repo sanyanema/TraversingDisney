@@ -65,16 +65,19 @@ We are using the unofficial API library called wdwJS -- ​​https://github.com
 
 
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- GETTING STARTED -->
 ## Installation
 To get a local version of our project, follow these simple instructions.
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ### Dataset
 Our dataset is 
+<p align="right">(<a href="#top">back to top</a>)</p>
+
 
 ### Building And Testing
 
@@ -85,7 +88,7 @@ Our dataset is
 
 <!-- USAGE EXAMPLES -->
 ## Features
-Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. Key features of our tool are the ability to map a path through the park using landmarks, the 
+Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. One key feature of our tool is that () Another key feature of our tool is ()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
