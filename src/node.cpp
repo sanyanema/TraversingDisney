@@ -26,3 +26,11 @@ double Node::getLongitude() {
 std::string Node::getName() {
     return name_;
 }
+
+const std::vector<Edge*> getEdges() {
+    return edges_;
+}
+
+const std::vector<Node*> getNodes() {
+    return nodes_;
+}
