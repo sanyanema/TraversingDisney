@@ -17,6 +17,8 @@ class Node {
         std::string getName();
         const std::vector<Edge*> & getEdges();
         const std::vector<Node*> & getNodes();
+        void addEdge(Edge* e);
+        void addNode(Node* n);
     private:
         int wait_time_;
         double latitude_;
