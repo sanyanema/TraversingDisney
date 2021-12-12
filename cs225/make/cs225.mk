@@ -32,7 +32,7 @@ CXXFLAGS += $(CS225) -std=c++1y -stdlib=libc++ -O0 $(WARNINGS) $(DEPFILE_FLAGS) 
 
 # Flags for linking:
 LDFLAGS += $(CS225) -std=c++1y -stdlib=libc++ -lc++abi
-#LDFLAGS = -std=c++1y -stdlib=libc++ 
+#LDFLAGS = -std=c++1y -stdlib=libc++ -lc++abi
 
 # Trying different makefile LDFLAGS
 #LDFLAGS = -std=c++1y -stdlib=libc++ -lc++abi -lm -lpthread

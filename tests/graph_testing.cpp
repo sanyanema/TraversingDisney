@@ -48,33 +48,19 @@ TEST_CASE("Check to see if graph gets deleted.") {
 
 // Latitude-Longitude Distance Function Tests
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
-  Node* first = new Node(1, 81.5, 80.5, "Ride");
-  Node* second = new Node(1, 34.5, 30.5, "Ride 2");
-  Edge* edge = new Edge(first, second);
   
-  double distance = edge->calculateDistance();
-
-  REQUIRE ( Approx(distance).epsilon(0.01) == 5595.4460665278 ); // kilometers
 }
 
 TEST_CASE("Check to see if distance function produces the correct value - One Pos, One Neg") {
-  Node* first = new Node(1, 81.5, -80.5, "Ride");
-  Node* second = new Node(1, -34.5, 30.5, "Ride 2");
-  Edge* edge = new Edge(first, second);
-  
-  double distance = edge->calculateDistance();
 
-  REQUIRE ( Approx(distance).epsilon(0.01) == 14137.9159003922 );
 }
 
-TEST_CASE("Check to see if distance function produces the correct value - Using actual data") {
-  Node* first = new Node(1, -81.5783907473, 28.4207661576, "The Barnstormer");
-  Node* second = new Node(1, -81.581255, 28.420169, "Prince Charming Regal Carousel");
-  Edge* edge = new Edge(first, second);
-  
-  double distance = edge->calculateDistance();
+TEST_CASE("Check to see if distance function produces the correct value - Both Neg") {
 
-  REQUIRE ( Approx(distance).epsilon(0.01) == 0.3186387535 );
+}
+
+TEST_CASE("Check to see if it recognizes out of bounds values") {
+
 }
 
 // BFS Tests
