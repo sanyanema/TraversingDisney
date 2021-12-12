@@ -62,9 +62,19 @@ void Graph::_copy(const Graph& other) {
     }
 }
 
-
 void Graph::addEdge(Node* first, Node* second, double edge_weight) {
     Edge* e = new Edge(first, second, edge_weight);
+    edges_.push_back(e);
+
+    first->addAdjacentEdge(e);
+    second->addAdjacentEdge(e);
+
+    first->addAdjacentNode(second);
+    second->addAdjacentNode(first);
+}
+
+void Graph::addEdge(Node* first, Node* second) {
+    Edge* e = new Edge(first, second);
     edges_.push_back(e);
 
     first->addAdjacentEdge(e);
@@ -79,15 +89,10 @@ const std::vector<Edge*>& Graph::getEdges() const {
 }
 
 void Graph::addNode(double wait_time, double latitude, double longitude, std::string name) {
-    /*
-    Node* n = new Node();
-    vertices_.insert(make_pair(address, n));
-    return n;
-**/
     Node* n = new Node(wait_time, latitude, longitude, name);
     vertices_.insert(std::make_pair(n->getRideName(), n));
-    // insert it
 }
+
 Node* Graph::getNode(const std::string& name) const {
     auto it = vertices_.find(name);
     return it == vertices_.end() ? NULL : it->second;
@@ -153,14 +158,15 @@ Graph* Graph::readCSV(std::string filename) {
 
     // THERE'S A LINKER COMMAND ERROR HERE. 
     
-    for (Node* n1 : graph->getNodes()) {
-        for (Node* n2 : graph->getNodes()) {
+    for (pair<string, Node*> n1 : graph->getNodes()) {
+        for (pair<string, Node*> n2 : graph->getNodes()) {
             if (n1 != n2) {
                 // add edge
-                graph->addEdge(n1, n2, 1.0); // calculate the distance
+                graph->addEdge(n1.second, n2.second); // calculate the distance
+
             } else {
                 // self edge -- use wait time
-                graph->addEdge(n1, n2, std::stod(wait_time));
+                graph->addEdge(n1.second, n2.second, std::stod(wait_time));
             }
         }
     }

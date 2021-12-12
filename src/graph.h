@@ -25,7 +25,7 @@ class Graph {
         void addNode(double wait_time, double latitude, double longitude, std::string name); // this will construct the node and build it
         //void removeNode(std::string ride);
         void addEdge(Node* node1, Node* node2, double edge_weight); // this will construct the egde and build it
-        //void removeEdge(std::string ride1, std::string ride2);
+        void addEdge(Node* node1, Node* node2); // this will construct the egde and build it
 
         bool isAdjacent(Node* ride1, Node* ride2) const; // checks if two nodes are adjacent to each other
         //std::vector<std::string> getAdjacentVertices(std::string ride) const;
