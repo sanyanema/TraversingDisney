@@ -1,6 +1,11 @@
 #include "node.h"
 
-Node::Node() {}
+Node::Node() {
+    wait_time_ = 0;
+    latitude_ = 0;
+    longitude_ = 0;
+    name_ = "";
+}
 
 Node::Node(int wait_time, double latitude, double longitude, std::string name) {
     wait_time_ = wait_time;

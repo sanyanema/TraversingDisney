@@ -86,7 +86,7 @@ TEST_CASE("Check to see if graph gets copied correctly") {
 // Test: addNode
 // ========================================================================
 
-TEST_CASE("Check to see if graph addNode changes size.") {
+TEST_CASE("Check to see if graph addNode works correctly.") {
   int rows = 0;
   ifstream file("tests/test_disney_data.csv");
   string line;
@@ -97,11 +97,26 @@ TEST_CASE("Check to see if graph addNode changes size.") {
 
   graph->addNode(1, 81.5, 80.5, "Ride");
   int numNodes = graph->getNodes().size();
+  //std::unordered_map<string, Node*> nodes_ = graph->getNodes();
+
+
+  unordered_map<string, Node*> map = graph->getNodes();
+  std::vector<Node*> nodes;
+  for (pair<string, Node*> n1 : map) {
+        // add each to a vector
+      nodes.push_back(n1.second);
+        // after loop do above loop and then i can do indexing 
+  }
+
   REQUIRE( numNodes == rows );
+  REQUIRE( nodes[numNodes - 1]->getWaitTime() == 1 );
+  REQUIRE( nodes[numNodes - 1]->getLatitude() == 81.5 );
+  REQUIRE( nodes[numNodes - 1]->getLongitude() == 80.5 );
+  REQUIRE( nodes[numNodes - 1]->getName() == "Ride" );
 }
 
 // ========================================================================
-// Test: addNode
+// Test: addEdge with weight
 // ========================================================================
 
 TEST_CASE("Check to see if graph gets .") {
@@ -113,9 +128,27 @@ TEST_CASE("Check to see if graph gets .") {
   while( getline(file, line) )
     rows++;
 
+  Node* first = new Node(1, 81.5, 80.5, "Ride");
+  Node* second = new Node(1, 34.5, 30.5, "Ride 2");
+  Edge* edge = new Edge(first, second);
   graph->addNode(1, 81.5, 80.5, "Ride");
   int numNodes = graph->getNodes().size();
+  //std::unordered_map<string, Node*> nodes_ = graph->getNodes();
+
+
+  unordered_map<string, Node*> map = graph->getNodes();
+  std::vector<Node*> nodes;
+  for (pair<string, Node*> n1 : map) {
+        // add each to a vector
+      nodes.push_back(n1.second);
+        // after loop do above loop and then i can do indexing 
+  }
+
   REQUIRE( numNodes == rows );
+  REQUIRE( nodes[numNodes - 1]->getWaitTime() == 1 );
+  REQUIRE( nodes[numNodes - 1]->getLatitude() == 81.5 );
+  REQUIRE( nodes[numNodes - 1]->getLongitude() == 80.5 );
+  REQUIRE( nodes[numNodes - 1]->getName() == "Ride" );
 }
 
 // Latitude-Longitude Distance Function Tests
@@ -139,7 +172,7 @@ TEST_CASE("Check to see if distance function produces the correct value - One Po
   
   double distance = edge->calculateDistance();
 
-  REQUIRE ( Approx(distance).epsilon(0.01) == 14137.9159003922 );
+  REQUIRE (Approx(distance).epsilon(0.01) == 14137.9159003922);
 }
 
 // ========================================================================
@@ -153,6 +186,27 @@ TEST_CASE("Check to see if distance function produces the correct value - Using 
   double distance = edge->calculateDistance();
 
   REQUIRE ( Approx(distance).epsilon(0.01) == 0.3186387535 );
+}
+// ========================================================================
+// Test: Checking incident of edges going a ride again
+// ========================================================================
+
+
+
+// ========================================================================
+// Test: Checking incident of edges going a ride again
+// ========================================================================
+TEST_CASE("Check to see if the incident function allows for same ride") {
+  //Graph* graph = Graph::readCSV("tests/test_disney_data.csv");
+  Node* first = new Node(1, -81.5783907473, 28.4207661576, "The Barnstormer");
+  Node* second = new Node(1,  -81.5783907473, 28.4207661576, "The Barnstormer");
+  Edge* edge = new Edge(first, second);
+
+  REQUIRE (first->getName() == second->getName());
+
+  /**
+
+  */
 }
 
 // BFS Tests
