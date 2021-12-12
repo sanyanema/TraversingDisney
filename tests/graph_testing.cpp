@@ -46,7 +46,7 @@ TEST_CASE("Check to see if graph gets deleted.") {
 
 // Latitude-Longitude Distance Function Tests
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
-
+  
 }
 
 TEST_CASE("Check to see if distance function produces the correct value - One Pos, One Neg") {
