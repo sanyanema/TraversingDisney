@@ -8,20 +8,25 @@ double Edge::convertToRadians(double value) const {
     return (one_degree * value);
 }
 
-double Edge::calculateDistance(Node* first, Node* second) const {
-    double first_latitude = first->getLatitude();
-    double first_longitude = first->getLongitude();
+double Edge::calculateDistance() const {
+    double first_latitude = first_->getLatitude();
+    double first_longitude = first_->getLongitude();
 
-    double second_latitude = second->getLatitude();
-    double second_longitude = second->getLongitude();
+    double second_latitude = second_->getLatitude();
+    double second_longitude = second_->getLongitude();
+
+    double first_latitude_ = convertToRadians(first_latitude);
+    double first_longitude_ = convertToRadians(first_longitude);
+    double second_latitude_ = convertToRadians(second_latitude);
+    double second_longitude_ = convertToRadians(second_longitude);
     
     // Haversine Formula
 
-    double dlong = second_longitude - first_longitude;
-    double dlat = second_latitude - first_latitude;
+    double dlong = second_longitude_ - first_longitude_;
+    double dlat = second_latitude_ - first_latitude_;
  
     double ans = pow(sin(dlat / 2), 2) +
-                     cos(first_latitude) * cos(second_latitude) *
+                     cos(first_latitude_) * cos(second_latitude_) *
                      pow(sin(dlong / 2), 2);
  
     ans = 2 * asin(sqrt(ans));
@@ -50,7 +55,7 @@ Edge::Edge(Node* first, Node* second, double edge_weight) {
 Edge::Edge(Node* first, Node* second) {
     first_ = first;
     second_ = second;
-    edge_weight_ = calculateDistance(first_, second_);
+    edge_weight_ = calculateDistance();
 }
 
 double Edge::getEdgeWeight() const {
