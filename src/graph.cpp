@@ -157,6 +157,7 @@ Graph* Graph::readCSV(std::string filename) {
             graph->addNode(std::stod(wait_time), std::stod(latitude), std::stod(longitude), ride_name);
         }
     }
+    graph.printNodes()
     
     // j = isAdjacent
     // for (int i = 0) {
