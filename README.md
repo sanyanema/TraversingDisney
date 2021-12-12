@@ -45,14 +45,11 @@
       </ul>
     </li>
     <li>
-      <a href="#documentation">Documentation</a>
-      <ul>
-        <li><a href="#">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#installation">Installation</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#dataset">Dataset</a></li>
+    <li><a href="#building-and-testing">Building and Testing</a></li>
+    <li><a href="#features">Features</a></li>
   </ol>
 </details>
 
