@@ -16,17 +16,6 @@ using namespace std;
 // ========================================================================
 
 TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
-<<<<<<< HEAD
-  int rows;
-  ifstream file("tests/test_data_set.csv");
-  string line;
-  Graph graph = readCSV(tests/test_data_set.csv);
-  int numNodes = graph.getNode().size();
-  int numEdges = graph.getEdges().size();
-  int expectedNumNodes = rows - 1;
-  int expectedNumEdges = numNodes;
-  while( getline(file, line) )
-=======
   int rows = 0;
   ifstream file("data/disney_data.csv");
   string line;
@@ -34,7 +23,6 @@ TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
   int numNodes = graph->getNodes().size();
   int numEdges = graph->getEdges().size();
   while( getline(file, line) ) {
->>>>>>> 8146a368a7682f3237b0cb55882d6ce88a34a7d3
     rows++;
   }
     
