@@ -170,25 +170,26 @@ Graph* Graph::readCSV(std::string filename) {
         // add each to a vector
         nodes.push_back(n1.second);
         // after loop do above loop and then i can do indexing 
+
         
     }
 
     for (unsigned i = 0; i < nodes.size(); i++) {
             for (unsigned j = i; j < nodes.size(); j++) {
-                //for (pair<string, Node*> n2 : graph->getNodes()) {
+                    //for (pair<string, Node*> n2 : graph->getNodes()) {
                 if (nodes[i] != nodes[j]) {
-                    // add edge
-                    graph->addEdge(nodes[i], nodes[j]); // calculate the distance
+                        // add edge
+                        graph->addEdge(nodes[i], nodes[j]); // calculate the distance
 
                 } else {
-                    // self edge -- use wait time
-                    graph->addEdge(nodes[i], nodes[j], std::stod(wait_time));
+                        // self edge -- use wait time this is why 741
+                        graph->addEdge(nodes[i], nodes[j], std::stod(wait_time));
                 }
             }
-        }
-    
+        } 
+
         return graph;
-    }
+}
 
     //return graph;
 //}
@@ -202,7 +203,9 @@ void Graph::printNodes() {
 
     //std::vector<Edge*> edges = node->getAdjacentNodes();
 
-    for (auto node1 : node->getAdjacentNodes()) {
-        std::cout << node1->getName() << std::endl;
-    }
+    // for (auto node1 : node->getAdjacentNodes()) {
+    //     std::cout << node1->getName() << std::endl;
+    // }
+
+    std::cout << getEdges().size();
 }

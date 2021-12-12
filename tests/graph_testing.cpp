@@ -37,12 +37,13 @@ TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
 // ========================================================================
 
 TEST_CASE("Check to see if graph gets deleted.") {
-  Graph* graph = Graph::readCSV("tests/test_disney_data.csv");
-  graph->Graph::~Graph();
+  Graph* graph = Graph::readCSV("tests/test_disney_data.csv"); // need to add delete graph
+  //graph->Graph::~Graph();
   int numNodes = graph->getNodes().size();
   int numEdges = graph->getEdges().size();
   REQUIRE( numNodes == 0 );
   REQUIRE( numEdges == 0 );
+  delete graph;
 }
 
 
