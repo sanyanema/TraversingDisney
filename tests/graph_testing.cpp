@@ -45,7 +45,40 @@ TEST_CASE("Check to see if graph gets deleted.") {
   REQUIRE( numEdges == 0 );
   delete graph;
 }
+/*
+// ========================================================================
+// Test: _copy, copy constructor
+// ========================================================================
 
+TEST_CASE("Check to see if graph gets copied correctly") {
+  Graph* graph = Graph::readCSV("tests/test_disney_data.csv");
+  Graph* copiedGraph = new Graph(graph);
+  
+  std::unordered_map<string, Node*> nodes = graph->getNodes();
+  std::unordered_map<string, Node*> copiedNodes = copiedGraph->getNodes();
+  std::vector<Edge*>& edges = graph->getEdges();
+  std::vector<Edge*>& copiedEdges = copiedGraph->getEdges();
+  
+  //check that the number of nodes and edges are the same
+  int numNodes = nodes.size();
+  int numEdges = copiedNodes.size();
+  int numNodes2 = edges.size();
+  int numEdges2 = copiedEdges.size();
+  REQUIRE( numNodes == numNodes2 );
+  REQUIRE( numEdges == numEdges2 );
+
+  //check that nodes are equal to each other
+  for(int i = 0; i < numNodes; i++){
+    REQUIRE( nodes[i].second == copiedNodes[i].second );
+  }
+
+  //check that edges are qual to each other
+  for(int i = 0; i < numEdges; i++){
+    REQUIRE( edges[i] == copiedEdges[i] );
+  }
+
+}
+*/
 
 // Latitude-Longitude Distance Function Tests
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
