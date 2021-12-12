@@ -8,10 +8,36 @@
 #include <string>
 #include <vector>
 
+using namespace csv;
+
+// ========================================================================
+// Test: addNode, getNode, getEdges, readCSV
+// ========================================================================
+
+TEST_CASE("Check to see if destructor ") {
+  int rows;
+  ifstream file("disney_data.csv");
+  string line;
+  Graph graph = readCSV(disney_data.csv);
+  int numNodes = graph.getNode().size();
+  int numEdges = graph.getEdges().size();
+  while( getline(file, line) )
+    rows++;
+  REQUIRE( numNodes == rows-1 );
+  REQUIRE( numEdges == numNodes );
+}
+
+// ========================================================================
+// Test: delete/destructor
+// ========================================================================
+
+TEST_CASE("Check to see if destructor ") {
+}
+
 
 // Latitude-Longitude Distance Function Tests
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
-    
+
 }
 
 TEST_CASE("Check to see if distance function produces the correct value - One Pos, One Neg") {
