@@ -88,6 +88,9 @@ void Graph::getNode() {
 //Don't know if needed but a getNode but if do implement here
 
 bool Graph::isAdjacent(Node* first, Node* second) const {
+    //location at both
+    //true and false statements
+    
     //make the Nodes two unsigned longs
     unsigned long nFirst = (unsigned long) first;
     unsigned long nSecond = (unsigned long) second;
