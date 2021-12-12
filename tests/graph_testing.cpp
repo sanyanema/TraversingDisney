@@ -97,7 +97,7 @@ TEST_CASE("Check to see if graph addNode changes size.") {
 }
 
 // ========================================================================
-// Test: addNode
+// Test: addEdge
 // ========================================================================
 
 TEST_CASE("Check to see if graph gets .") {
