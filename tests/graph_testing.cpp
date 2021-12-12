@@ -21,10 +21,12 @@ TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
   Graph graph = readCSV(disney_data.csv);
   int numNodes = graph.getNode().size();
   int numEdges = graph.getEdges().size();
+  int expectedNumNodes = rows - 1;
+  int expectedNumEdges = numNodes;
   while( getline(file, line) )
     rows++;
-  REQUIRE( numNodes == rows-1 );
-  REQUIRE( numEdges == numNodes );
+  REQUIRE( numNodes == expectedNumNodes );
+  REQUIRE( numEdges == expectedNumEdges );
 }
 
 // ========================================================================
