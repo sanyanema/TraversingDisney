@@ -25,11 +25,9 @@ TEST_CASE("Check to see if the correct number of edges and nodes are added.") {
   while( getline(file, line) )
     rows++;
   int expectedNumNodes = rows - 1;
-  int minNumEdges = expectedNumNodes - 1;
-  int maxNumEdges = expectedNumNodes * (expectedNumNodes - 1);
+  int expectedNumEdges = expectedNumNodes * (expectedNumNodes - 1) / 2 + expectedNumNodes;
   REQUIRE( numNodes == expectedNumNodes );
-  REQUIRE( numEdges >= minNumEdges );
-  REQUIRE( numEdges <= maxNumEdges );
+  REQUIRE( numEdges == expectedNumEdges );
 }
 
 // ========================================================================
@@ -79,6 +77,18 @@ TEST_CASE("Check to see if graph gets copied correctly") {
 
 }
 */
+
+// ========================================================================
+// Test: addNode
+// ========================================================================
+
+TEST_CASE("Check to see if graph gets .") {
+  Graph* graph = Graph::readCSV("tests/test_disney_data.csv");
+  int numNodes = graph->getNodes().size();
+  int numEdges = graph->getEdges().size();
+  REQUIRE( numNodes == 0 );
+  REQUIRE( numEdges == 0 );
+}
 
 // Latitude-Longitude Distance Function Tests
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
