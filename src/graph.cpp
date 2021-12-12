@@ -153,17 +153,17 @@ Graph* Graph::readCSV(std::string filename) {
 
     // THERE'S A LINKER COMMAND ERROR HERE. 
     
-    // for (Node* n1 : graph->getNodes()) {
-    //     for (Node* n2 : graph->getNodes()) {
-    //         if (n1 != n2) {
-    //             // add edge
-    //             graph->addEdge(n1, n2, 1.0); // calculate the distance
-    //         } else {
-    //             // self edge -- use wait time
-    //             graph->addEdge(n1, n2, std::stod(wait_time));
-    //         }
-    //     }
-    // }
+    for (Node* n1 : graph->getNodes()) {
+        for (Node* n2 : graph->getNodes()) {
+            if (n1 != n2) {
+                // add edge
+                graph->addEdge(n1, n2, 1.0); // calculate the distance
+            } else {
+                // self edge -- use wait time
+                graph->addEdge(n1, n2, std::stod(wait_time));
+            }
+        }
+    }
 
     return graph;
 }
