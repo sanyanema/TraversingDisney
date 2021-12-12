@@ -84,6 +84,9 @@ TEST_CASE("Check to see if graph gets copied correctly") {
 
 TEST_CASE("Check to see if graph gets .") {
   Graph* graph = Graph::readCSV("tests/test_disney_data.csv");
+  Node* first = new Node(1, 81.5, 80.5, "Ride");
+  Node* second = new Node(1, 34.5, 30.5, "Ride 2");
+  addNode() 
   int numNodes = graph->getNodes().size();
   int numEdges = graph->getEdges().size();
   REQUIRE( numNodes == 0 );
