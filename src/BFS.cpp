@@ -5,6 +5,7 @@
 BFS::BFS() {
     //Input: Graph, G
     //Output: A labeling of the edges on G as discovery and cross edges
+
 }
 
 BFS::BFS(const Graph& other) {
@@ -36,11 +37,11 @@ void BFS::bfsTraversal(std::string path) {
         }
     }
 }
-void BFS::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nodeExplore, int vertex) {
+void BFS::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nodeExplore, int Node) {
     queue<int> q;
-    nodeExplore[Node*] = true; //vertex
-    bfsVertexList.push_back(Node*);
-    q.push(Node*); //(vertex)
+    nodeExplore[Node] = true; //vertex
+    bfsVertexList.push_back(Node);
+    q.push(Node); //(vertex)
 
     //^above don't necessarily know what should be inside the () and []
 

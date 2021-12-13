@@ -279,16 +279,31 @@ TEST_CASE("Check to see if the incident function allows for same ride") {
   REQUIRE (first->getName() == second->getName());
 }
 
-// BFS Tests
 
+// BFS Tests
 
 
 // ========================================================================
 // Test: Checking BFS Constructor for proper implementation
-// =======================================================================
-TEST_CASE("BFS Constructor Works") {
+// ========================================================================
+TEST_CASE("BFS Traversal ") {
+  for (int i = 0; i < edgeExploredList.size(); i++) {
+
+  }
+}
+
+// ========================================================================
+// Test: BFS with name of rides
+// ========================================================================
+TEST_CASE("Checking BFS Iterator") {
+  std::cout << "Reading through graph" << std::endl;
+  Graph g = test.getGraph()
+  int numNodes = graph->getNodes().size();
+  int numEdges = graph->getEdges().size();
+
 
 }
+
 
 TEST_CASE("BFS maintains the correct point on top", "[weight=0][part=1][part=1b]") {
 
@@ -316,10 +331,6 @@ TEST_CASE("BFS maintains the BFS ordering", "[weight=0][part=1][part=1b]") {
 //   REQUIRE( bfs.pop() == Point(2, 2) );
 //   REQUIRE( bfs.pop() == Point(2, 3) );
 //   REQUIRE( bfs.pop() == Point(2, 4) );
-}
-
-TEST_CASE("Produces the correct BFS for the entire dataset") {
-
 }
 
 TEST_CASE("BFS is able to add edges") {
