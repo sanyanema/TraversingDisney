@@ -74,8 +74,8 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a, Graph* g) {
             }
             else {
                 Node* adjacent = adjacent_nodes[v];
-                
-                double edge_weight = 1.0; // get edge between current and adjacent
+                Edge* edge(adjacent, current);
+                double edge_weight = edge->getEdgeWeight(); // get edge between current and adjacent
                 if (dist[adjacent] > dist[current] + edge_weight) {
                     dist[adjacent] = dist[current] + edge_weight;
                     pq.push(make_pair(dist[adjacent], adjacent));
