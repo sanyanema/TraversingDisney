@@ -1,20 +1,58 @@
 #include "BFS.h"
+#include <list>
+#include <vector>
+#include "node.h"
+#include "edge.h"
+
+using namespace std;
 
 //skeleton of BFS graph traversal
 
 BFS::BFS() {
     //Input: Gph, G
     //Output: A labeling of the edges on G as discovery and cross edges
-
 }
-
-void BFS::bfsTraversal(std::string path) {
-    int fileRow = 0; //number of rows in the data
+void BFS::bfsTraversal(std::string path, Graph * graph) {
+    int s = 0;     
+    int fileRow = 0;
     std::ifstream file(path);
     std::string line;
     while( getline(file, line) ) {
         fileRow++;
     }
+    bool *visited = new bool[fileRow];
+    for(int i = 0; i < fileRow; i++) {
+        visited[i] = false;
+    }
+    //list<int>queue;
+    list<int> queue;
+
+    //marks the current nodes as visited and enqueue it
+    visited[s] = true;
+    queue.push_back(s);
+
+    list<int>::iterator i;
+    list<int> *adj = new list<int>[fileRow];
+    for (pair<string, Node*> n1 : graph->getNodes()) 
+        adj->push_back(n1.second->getAdjacentNodes());
+
+    while(!queue.empty()) { //dequeue the value at when checking next ride
+        s = queue.front();
+        std::cout << s << " ";
+        queue.pop_front();
+
+    }
+    for (i = adj[s].begin(); i !=adj[s].end(); ++i) {
+        if (!visited[*i]) {
+            visited[*i] = true;
+            queue.push_back(*i);
+        }
+    }
+
+}
+
+
+/**
     std::vector<bool> nodeExplore(fileRow);   //node_count_
     //bfs checks row by row
     std::vector<bool> t;
@@ -61,6 +99,8 @@ void BFS::bfsTraversal(std::vector<std::vector<bool>> &edgeExploredList, std::ve
         }
     }
 }
+
+*/
 
 /**
 foreach (Vertex v : G.vertices()):
