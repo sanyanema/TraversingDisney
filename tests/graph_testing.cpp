@@ -225,7 +225,7 @@ TEST_CASE("Check to see if isAdjacent works correctly.") {
   }
 
   REQUIRE( graph->isAdjacent(nodes[1], nodes[2]) );
-  REQUIRE( !( graph->isAdjacent(nodes[0], nodes[nodes.size()-1]) ) );
+  REQUIRE( !(graph->isAdjacent(nodes[0], nodes[1]) ) );
 }
 
 // ========================================================================
@@ -309,11 +309,15 @@ TEST_CASE("BFS maintains the BFS ordering", "[weight=0][part=1][part=1b]") {
 //   REQUIRE( bfs.pop() == Point(2, 4) );
 }
 
-TEST_CASE("Produces the correct BFS for the entire dataset") {
+// ========================================================================
+// Test: Checking incident of edges going a ride again
+// ========================================================================
+TEST_CASE("BFS Constructor Works") {
 
 }
 
-TEST_CASE("BFS Constructor Works") {
+TEST_CASE("Produces the correct BFS for the entire dataset") {
+  
 
 }
 

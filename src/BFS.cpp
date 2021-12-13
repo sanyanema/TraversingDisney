@@ -6,12 +6,8 @@
 //skeleton of BFS graph traversal
 
 BFS::BFS() {
-    //Input: Graph, G
+    //Input: Gph, G
     //Output: A labeling of the edges on G as discovery and cross edges
-}
-
-BFS::BFS(const Graph& other) {
-    _copy(other);
 }
 
 void BFS::bfsTraversal(std::string path) {
@@ -50,11 +46,12 @@ void BFS::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nod
         q.pop();
         for(int col = 0; col < fileRow; col++) {
             if (adjList[frontNode][col]) {  //adj_list_ dont know what to call in this
-                if(!nodeExplore[col]) {
+                if(!nodeExplore[col]) { //geekforgeek if(!visited[*i])
                     edgeExploredList[frontNode][col] = true;
                     bfsEdgeList.pushback(std::pair<int, int>(frontNode, col));
-                    nodeExplore[col] = true;
+                    nodeExplore[col] = true;    //geekforgeek
                     bfsVertexList.push_back(col);
+                    //queue.push_back(*i)
                     q.push(col);
                 } else if (!edgeExploredList[frontNode][col]) {
                     edgeExploredList[frontNode][col] = true;
