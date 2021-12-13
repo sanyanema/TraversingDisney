@@ -116,7 +116,7 @@ TEST_CASE("Check to see if graph addNode works correctly.") {
 // Test: addEdge
 // ========================================================================
 
-TEST_CASE("Check to see if graph gets ..") {
+TEST_CASE("Check to see if graph gets updated after adding nodes and edges without weight.") {
   int rows = 0;
   ifstream file("tests/test_disney_data.csv");
   string line;
@@ -167,7 +167,7 @@ TEST_CASE("Check to see if graph gets ..") {
 // Test: addEdge with weight
 // ========================================================================
 
-TEST_CASE("Check to see if graph gets ...") {
+TEST_CASE("Check to see if graph gets updated after adding nodes and edges with weight.") {
   int rows = 0;
   ifstream file("tests/test_disney_data.csv");
   string line;
@@ -215,7 +215,7 @@ TEST_CASE("Check to see if graph gets ...") {
 // Test: isAdjacent
 // ========================================================================
 
-TEST_CASE("Check to see if graph gets ....") {
+TEST_CASE("Check to see if isAdjacent works correctly.") {
   Graph * graph = Graph::readCSV("tests/test_disney_data.csv");
   
   std::vector<Node*> nodes;
