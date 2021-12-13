@@ -49,7 +49,11 @@
 
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Walt_Disney_World_Logo_2018.svg/2560px-Walt_Disney_World_Logo_2018.svg.png" alt="disneyworld" width="640" height="119">
 
-We are using the unofficial API library called wdwJS -- ​​https://github.com/zpocbob/wdwJS. The dataset provides information about various rides in Disney Theme Parks around the world, such as Disney California and Disney Paris. This information includes the individual ride wait times, the schedule for these rides, and which park the ride is located in. We downloaded our data by pulling from the github repository that it was in. We used BFS to work with our dataset because of its queue structure, and are specifically using it to generate the overall path to all the rides. As for our graph algorithms, we chose to use Djikastra's Algorithm, as well as Kruskal's Algorithm. We used Djikastra's Algorithm to calculate the shortest point between two rides. We used Kruskal's Algorithm to generate the maximum amount of rides that a user can ride within their time constraint, by generating a minimum spanning tree. We also used self edges, for which the edge weight is the wait time, whereas for the other edges, the edge weight represents the distance between the two rides.
+We are using the unofficial API library called wdwJS -- ​​https://github.com/zpocbob/wdwJS. The dataset provides information about various rides in Disney Theme Parks around the world, such as Disney California and Disney Paris. This information includes the individual ride wait times, the schedule for these rides, and which park the ride is located in. We downloaded our data by pulling from the github repository that it was in. We used BFS to work with our dataset because of its queue structure, and are specifically using it to generate the overall path to all the rides. As for our graph algorithms, we chose to use Djikastra's Algorithm, as well as Kruskal's Algorithm. We used Djikastra's Algorithm to calculate the shortest point between two rides. 
+
+Given a starting ride, Dijkstra’s will return the shortest path for each ride from that ride. This means that if we start at Ride 1, and want to go to Ride 3, there might be multiple paths. You could go from Ride 1 to Ride 5 to Ride 3, or Ride 1 to Ride 4 to Ride 3, and one of these will be the shortest. This can help the rider understand how to get to a certain ride the quickest way, if they only care about that specific ride.
+
+Kruskal’s also generates the shortest path given a specific starting node, however it attempts to provide the rider with the greatest number of rides while maintaining the shortest path. The use case for this is to generate a path that not only takes the least amount of time/distance, but also allows the rider to visit most of Disneyworld. 
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -76,9 +80,6 @@ Our dataset is
 
 ### Logic And Testing
 
-Given a starting ride, Dijkstra’s will return the shortest path for each ride from that ride. This means that if we start at Ride 1, and want to go to Ride 3, there might be multiple paths. You could go from Ride 1 to Ride 5 to Ride 3, or Ride 1 to Ride 4 to Ride 3, and one of these will be the shortest. This can help the rider understand how to get to a certain ride the quickest way, if they only care about that specific ride.
-
-Kruskal’s also generates the shortest path given a specific starting node, however it attempts to provide the rider with the greatest number of rides while maintaining the shortest path. The use case for this is to generate a path that not only takes the least amount of time/distance, but also allows the rider to visit most of Disneyworld. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
