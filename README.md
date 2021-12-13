@@ -20,7 +20,7 @@
 
   <p align="center">
     For our final project, we chose to work with a dataset which includes data about various rides in Disney parks around the wworld, ranging fron Disneyland California to Disney Paris. We worked over the course of roughly a month to create a tool that calculates the optimal path through the park given a time constraint. We defined the optimal path as the path where the user could go on the most rides in the least amount of time. We also used the wait time for each ride to calculate the path. We used BFS to work with our dataset, and Djikastra's Algorithm as well as Kruskal's Algorithm as our graph algorithm.
-    
+
   </p>
 </div>
 
@@ -34,7 +34,7 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
-      <a href="#installation">Installation</a>
+      <a href="#commands-to-run-the-program">Commands To Run The Program</a>
     </li>
     <li><a href="#dataset">Dataset</a></li>
     <li><a href="#test-suite-and-testing">Test Suite and Testing</a></li>
@@ -64,11 +64,15 @@ Kruskal’s also generates the shortest path given a specific starting node, how
 
 
 <!-- GETTING STARTED -->
-## Installation
-To get a local version of our project, follow these simple instructions.
-Run 
+## Commands To Run The Program
+To get a local version of our project, follow these simple instructions. Run 
 ```sh
   git clone https://github-dev.cs.illinois.edu/cs225-fa21/snema2-ag52-knagpu2-shreyap7.git
+``` 
+To make the prject after you have cloned it, run
+```sh
+  make
+  ./project
 ``` 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -79,8 +83,11 @@ Our dataset is
 
 
 ### Test Suite and Testing
-
-
+To test the code 
+```sh
+  make test
+  ./test
+``` 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
