@@ -37,7 +37,7 @@
       <a href="#installation">Installation</a>
     </li>
     <li><a href="#dataset">Dataset</a></li>
-    <li><a href="#building-and-testing">Building and Testing</a></li>
+    <li><a href="#logic-and-testing">Logic and Testing</a></li>
     <li><a href="#features">Features</a></li>
   </ol>
 </details>
@@ -74,8 +74,11 @@ Our dataset is
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Building And Testing
+### Logic And Testing
 
+Given a starting ride, Dijkstra’s will return the shortest path for each ride from that ride. This means that if we start at Ride 1, and want to go to Ride 3, there might be multiple paths. You could go from Ride 1 to Ride 5 to Ride 3, or Ride 1 to Ride 4 to Ride 3, and one of these will be the shortest. This can help the rider understand how to get to a certain ride the quickest way, if they only care about that specific ride.
+
+Kruskal’s also generates the shortest path given a specific starting node, however it attempts to provide the rider with the greatest number of rides while maintaining the shortest path. The use case for this is to generate a path that not only takes the least amount of time/distance, but also allows the rider to visit most of Disneyworld. 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
