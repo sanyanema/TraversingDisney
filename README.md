@@ -62,10 +62,10 @@ We are using the unofficial API library called wdwJS -- ​​https://github.com
 <!-- GETTING STARTED -->
 ## Installation
 To get a local version of our project, follow these simple instructions.
-Run 
-```sh
+Run  ```sh
   git clone https://github-dev.cs.illinois.edu/cs225-fa21/snema2-ag52-knagpu2-shreyap7.git
 ``` 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
