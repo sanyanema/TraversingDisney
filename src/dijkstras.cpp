@@ -124,5 +124,7 @@ std::vector<Edge> runDijkstras(std::string name, Node* a, Node* b) {
 // }
 
 std::vector<Node*> Dijikstras::getActualPath() {
-
+    // To print it out nicely for the .txt file.
+    std::cout << "Node \t \t Distance from Starting Node" << std::endl;
+    std::cout << "Node Name" << "\t \t \t" << "<Distance Goes Here>" << std::endl;
 }
