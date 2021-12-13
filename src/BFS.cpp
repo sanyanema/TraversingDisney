@@ -1,8 +1,5 @@
 #include "BFS.h"
 
-
-
-
 //skeleton of BFS graph traversal
 
 BFS::BFS() {
@@ -44,6 +41,8 @@ void BFS::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nod
     nodeExplore[Node*] = true; //vertex
     bfsVertexList.push_back(Node*);
     q.push(Node*); //(vertex)
+
+    //^above don't necessarily know what should be inside the () and []
 
     while (!q.empty()) {
         int frontNode = q.front();

@@ -16,5 +16,6 @@ class BFS {
         void bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nodeExplore, int vertex);
     private:
         // possibly make a variable for explored nodes
+        
 };
 

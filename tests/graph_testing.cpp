@@ -280,6 +280,15 @@ TEST_CASE("Check to see if the incident function allows for same ride") {
 
 // BFS Tests
 
+
+
+// ========================================================================
+// Test: Checking BFS Constructor for proper implementation
+// =======================================================================
+TEST_CASE("BFS Constructor Works") {
+
+}
+
 TEST_CASE("BFS maintains the correct point on top", "[weight=0][part=1][part=1b]") {
 
 //PNG png(40, 40);
@@ -309,10 +318,6 @@ TEST_CASE("BFS maintains the BFS ordering", "[weight=0][part=1][part=1b]") {
 }
 
 TEST_CASE("Produces the correct BFS for the entire dataset") {
-
-}
-
-TEST_CASE("BFS Constructor Works") {
 
 }
 
