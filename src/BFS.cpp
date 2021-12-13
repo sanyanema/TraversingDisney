@@ -5,8 +5,26 @@
 BFS::BFS() {
     //Input: Gph, G
     //Output: A labeling of the edges on G as discovery and cross edges
-
 }
+
+
+
+/**
+
+BFS::BFS(Graph & graph) {
+    graph_ = graph;
+
+    std::vector<bool> nodeExplore(fileRow);   //node_count_
+    //bfs checks row by row
+    std::vector<bool> t;
+    std::vector<std::vector<bool>> edgeExploredList;
+
+
+    sortEdges();
+    ds_ = DisjointSets();
+    ds_.makeDisjointSet(graph);
+}
+
 
 void BFS::bfsTraversal(std::string path) {
     int fileRow = 0; //number of rows in the data
@@ -15,11 +33,7 @@ void BFS::bfsTraversal(std::string path) {
     while( getline(file, line) ) {
         fileRow++
     }
-    std::vector<bool> nodeExplore(fileRow);   //node_count_
-    //bfs checks row by row
-    std::vector<bool> t;
-    std::vector<std::vector<bool>> edgeExploredList;
-    nodeRows(fileRow);
+    //nodeRows(fileRow);
 
     for(int i = 0;i < fileRow; i++) {
         edgeExploredList.push_back(nodeRows);
@@ -27,7 +41,7 @@ void BFS::bfsTraversal(std::string path) {
     //Nodes not explored yet
     for (int i=0; i < fileRow; i++) {
         if (!nodeExplore[i]) {
-            bfsTraversal(edgeExploredList, nodeExplore, i);
+            bfsTraversal(edgeExploredList, nodeExplore, i); 
             //need a count for all connected components 
             //connected_components++; ?????
         }
@@ -61,6 +75,8 @@ void BFS::bfsTraversal(std::vector<std::vector<bool>> &edgeExploredList, std::ve
         }
     }
 }
+
+*/
 
 /**
 foreach (Vertex v : G.vertices()):
