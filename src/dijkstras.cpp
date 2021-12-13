@@ -99,6 +99,7 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
         std::cout << node.first->getName() << std::endl << node.second << std::endl;
     }
 
+    getActualPath(dist, "djikstras_output.txt");
     return path;
 }
 
@@ -120,10 +121,26 @@ std::vector<Node*> Dijkstras::runDijkstras(std::string name, Node* a, Node* b) {
 //     return g_;
 // }
 
-std::vector<Node*> Dijkstras::getActualPath() {
+std::vector<Node*> Dijkstras::getActualPath(std::unordered_map<Node*, double> dist, std::string outfilename) {
     // To print it out nicely for the .txt file.
-    std::cout << "Node \t \t Distance from Starting Node" << std::endl;
-    std::cout << "Node Name" << "\t \t \t" << "<Distance Goes Here>" << std::endl;
-    std::vector<Node*> nodes;
+   std::ofstream outfile;
+   outfile.open(outfilename);
+
+   std::vector<Node*> nodes;
+   
+   std::cout << "Node \t \t Distance from Starting Node" << std::endl;
+
+   outfile << "Node \t \t Distance from Starting Node" << std::endl;
+
+    
+    
+    for (std::pair<Node*, double> node : dist) {
+        
+        outfile << node.first->getName() << " = " << node.second << std::endl;
+    }
+
+    outfile.close();
+    
+
     return nodes;
 }
