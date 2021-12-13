@@ -110,7 +110,7 @@ std::vector<Node*> Dijkstras::generateTXT(std::unordered_map<Node*, double> dist
 
     std::vector<Node*> nodes;
 
-    outfile << "Node \t \t Distance from Starting Node" << std::endl;
+    outfile << "Node \t \t  \t Shortest Distance from Starting Node" << std::endl;
 
     for (std::pair<Node*, double> node : dist) {
         
