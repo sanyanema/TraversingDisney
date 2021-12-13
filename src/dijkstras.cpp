@@ -12,18 +12,18 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
 
     Node* node = graph->getNode(a->getName());
 
-    std::cout << node->getName();
-
-    //Initializes map of distance for each vertex, all distances set to infinity at start
+    //Initializes map of distance for each node by getting it from the graph.
     std::unordered_map<std::string, Node*> map = graph->getNodes();
+
+    // Create a vector for just the nodes.
     std::vector<Node*> nodes;
 
     for (std::pair<std::string, Node*> node : map) {
         nodes.push_back(node.second);
-        //std::cout << node.second->getName() << std::endl;
     }
-   
-    std::unordered_map<Node*, double> dist; // this is a dist array that specifically maps from a Node to its distance from Node A
+
+    // This is a dist array that specifically maps from a Node to its distance from Node A.
+    std::unordered_map<Node*, double> dist; 
 
     for (unsigned v = 0; v < nodes.size(); ++v) {
         // Finds the node to set the distance of, which is nodes[v]
@@ -35,11 +35,11 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
     //Initialize a map that maps current node to its previous node.
     //std::unordered_map<Node*, Node*> prev;
 
-    //Initialize priority queue (min-heap), with source vertex's distance = 0
+    //Initialize priority queue (min-heap), with the node being started from is 0.
     std::priority_queue<std::pair<double, Node*>, std::vector<std::pair<double, Node*>>, std::greater<std::pair<double, Node*>>> pq;
     pq.push(std::make_pair(0, a));
 
-    //Initialize unordered map of visited/unvisited nodes
+    //Initialize unordered map of visited.
     std::unordered_map<Node*, bool> visited;
     for (unsigned v = 0; v < nodes.size(); ++v) {
         visited[nodes[v]] = false;
@@ -47,10 +47,10 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
 
     // Loops through the priority queue until it is empty. 
     while (!pq.empty()) {
-        //std::cout << "dist[i].second" << std::endl;
-        //Node* current = pq.top().second; // to access the Node of the pair
+
+        // Need to retrieve the node from the loaded graph. 
         Node* curr = graph->getNode(pq.top().second->getName());
-        //std::cout << curr->getName() << std::endl;
+
         pq.pop(); // after accessing, pop this value
 
         // Get access to only the adjacent nodes of this particular node, since
@@ -65,18 +65,18 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
             }
             else {
                 Node* adjacent = adjacent_nodes[v];
-                //std::cout << adjacent->getName();
+                
                 Edge* edge = new Edge(adjacent, curr);
                 double edge_weight = edge->getEdgeWeight(); // get edge between current and adjacent
-                //std::cout << edge_weight << std::endl;
-                if (dist[adjacent] > dist[curr] + edge_weight) { // changed to <
-                    std::cout << "hello";
+                
+                if (dist[adjacent] > dist[curr] + edge_weight) { 
+                   
                     dist[adjacent] = dist[curr] + edge_weight;
                     pq.push(std::make_pair(dist[adjacent], adjacent));
                 }
             }
         }
-        visited[curr] = true;
+        visited[curr] = true; // Updates the visited value.
     }
 
     //Extracts shortest path from previous map
@@ -94,53 +94,30 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
     //     std::cout << dist[i].second << std::endl;
     // }
 
-    for (std::pair<Node*, double> node : dist) {
-        std::cout << "\"";
-        std::cout << node.first->getName() << std::endl << node.second << std::endl;
-    }
+    // for (std::pair<Node*, double> node : dist) {
+    //     std::cout << "\"";
+    //     std::cout << node.first->getName() << std::endl << node.second << std::endl;
+    // }
 
-    getActualPath(dist, "djikstras_output.txt");
+    generateTXT(dist, "djikstras_output.txt");
     return path;
 }
 
-std::vector<Node*> Dijkstras::runDijkstras(std::string name, Node* a, Node* b) {
-    //Dijkstras dijkstras = Dijkstras(data);
-    int fileRow = 0; //number of rows in the data
-    std::ifstream file(name);
-    std::string line;
-    // while( getline(name, line) ) {
-    //     fileRow++;
-    // }
-
-    //return dijkstras.Dijkstras_Helper(a, b);
-    std::vector<Node*> nodes;
-    return nodes;
-}
-
-// Graph Dijkstras::getGraph() {
-//     return g_;
-// }
-
-std::vector<Node*> Dijkstras::getActualPath(std::unordered_map<Node*, double> dist, std::string outfilename) {
+std::vector<Node*> Dijkstras::generateTXT(std::unordered_map<Node*, double> dist, std::string outfilename) {
     // To print it out nicely for the .txt file.
-   std::ofstream outfile;
-   outfile.open(outfilename);
+    std::ofstream outfile;
+    outfile.open(outfilename);
 
-   std::vector<Node*> nodes;
-   
-   std::cout << "Node \t \t Distance from Starting Node" << std::endl;
+    std::vector<Node*> nodes;
 
-   outfile << "Node \t \t Distance from Starting Node" << std::endl;
+    outfile << "Node \t \t Distance from Starting Node" << std::endl;
 
-    
-    
     for (std::pair<Node*, double> node : dist) {
         
         outfile << node.first->getName() << " = " << node.second << std::endl;
     }
 
     outfile.close();
-    
 
     return nodes;
 }

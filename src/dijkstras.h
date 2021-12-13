@@ -31,7 +31,7 @@ class Dijkstras {
         //Graph getter
         //Graph getGraph();
 
-        std::vector<Node*> getActualPath(std::unordered_map<Node*, double> dist, std::string outfilename);
+        std::vector<Node*> generateTXT(std::unordered_map<Node*, double> dist, std::string outfilename);
     private:
         //Graph g_;
         Graph* graph;
