@@ -7,7 +7,7 @@
 #include <iostream>
 
 #include "dijkstras.h"
-#include "graph.h"
+
 
 Dijkstras::Dijkstras(std::vector<std::vector<std::string>> data) : g_(true, false) {
     for (unsigned i = 0; i < data.size(); ++i) {
@@ -115,4 +115,8 @@ std::vector<Edge> runDijkstras(std::vector<std::vector<std::string>> data, Verte
 
 Graph Dijkstras::getGraph() {
     return g_;
+}
+
+std::vector<Node*> Dijikstras::getActualPath() {
+
 }

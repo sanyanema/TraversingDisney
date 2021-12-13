@@ -332,11 +332,15 @@ TEST_CASE("BFS path works") {
 
 // Dijikstra's Tests
 
-TEST_CASE("Check to see if edgeWeight works") {
+TEST_CASE("Check [helper function]") {
 
 }
 
-TEST_CASE("Check [helper function]") {
+TEST_CASE("Check to see if all the edge weights are non-negative") {
+
+}
+
+TEST_CASE("Check if the shortest path gets updated") {
 
 }
 
