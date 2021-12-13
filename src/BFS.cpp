@@ -10,10 +10,10 @@ BFS::BFS() {
 
 void BFS::bfsTraversal(std::string path) {
     int fileRow = 0; //number of rows in the data
-    ifstream file(path);
-    String line;
+    std::ifstream file(path);
+    std::string line;
     while( getline(file, line) ) {
-        fileRow++
+        fileRow++;
     }
     std::vector<bool> nodeExplore(fileRow);   //node_count_
     //bfs checks row by row

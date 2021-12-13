@@ -296,7 +296,7 @@ TEST_CASE("BFS Traversal ") {
 // Test: BFS with name of rides
 // ========================================================================
 TEST_CASE("Checking BFS Iterator") {
-  std::cout << "Reading through graph" << std::endl;
+  // std::cout << "Reading through graph" << std::endl;
   Graph g = test.getGraph()
   int numNodes = graph->getNodes().size();
   int numEdges = graph->getEdges().size();
