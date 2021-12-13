@@ -281,6 +281,15 @@ TEST_CASE("Check to see if the incident function allows for same ride") {
 
 // BFS Tests
 
+
+
+// ========================================================================
+// Test: Checking BFS Constructor for proper implementation
+// =======================================================================
+TEST_CASE("BFS Constructor Works") {
+
+}
+
 TEST_CASE("BFS maintains the correct point on top", "[weight=0][part=1][part=1b]") {
 
 //PNG png(40, 40);
@@ -331,11 +340,15 @@ TEST_CASE("BFS path works") {
 
 // Dijikstra's Tests
 
-TEST_CASE("Check to see if edgeWeight works") {
+TEST_CASE("Check [helper function]") {
 
 }
 
-TEST_CASE("Check [helper function]") {
+TEST_CASE("Check to see if all the edge weights are non-negative") {
+
+}
+
+TEST_CASE("Check if the shortest path gets updated") {
 
 }
 
