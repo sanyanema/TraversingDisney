@@ -65,17 +65,14 @@ Kruskal’s also generates the shortest path given a specific starting node, how
 
 <!-- GETTING STARTED -->
 ## Commands To Run The Program
-To get a local version of our project, follow these simple instructions. Run 
-```sh
-  git clone https://github-dev.cs.illinois.edu/cs225-fa21/snema2-ag52-knagpu2-shreyap7.git
-``` 
+To get a local version of our project, follow these simple instructions. Run  ```git clone https://github-dev.cs.illinois.edu/cs225-fa21/snema2-ag52-knagpu2-shreyap7.git``` 
 To make the prject after you have cloned it, run
-```sh
+```
   make
   ./project
 ``` 
 In the 
-```sh main.cpp```, we pass in the dataset as a filename and our output location is 3 ```sh .txt``` files, one for each of the algorithms.
+```main.cpp```, we pass in the dataset as a filename and our output location is 3 ```.txt``` files, one for each of the algorithms.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -86,7 +83,7 @@ Our dataset is
 
 
 ### Test Suite and Testing
-To test the code 
+To test the code, run the following command
 ```sh
   make test
   ./test
