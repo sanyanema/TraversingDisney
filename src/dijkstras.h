@@ -6,6 +6,7 @@
 
 #include "graph.h"
 #include "edge.h"
+#include "node.h"
 
 class Dijkstras {
     public:
@@ -20,6 +21,8 @@ class Dijkstras {
 
         //Graph getter
         Graph getGraph();
+
+        std::vector<Node*> getActualPath();
     private:
         Graph g_;
 };
