@@ -10,6 +10,10 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
     double distance;
     std::pair<double, Node*> pair;
 
+    Node* node = graph->getNode(a->getName());
+
+    std::cout << node->getName();
+
     //Initializes map of distance for each vertex, all distances set to infinity at start
     std::unordered_map<std::string, Node*> map = graph->getNodes();
     std::vector<Node*> nodes;
@@ -26,7 +30,7 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
         dist[nodes[v]] = INF; // setting the distance to all the nodes in the dist array to be INF because haven't been set yet
     }
 
-    dist[a] = 0; // a is the starting node, so dist from a to a is 0
+    dist[node] = 0; // a is the starting node, so dist from a to a is 0
 
     //Initialize a map that maps current node to its previous node.
     //std::unordered_map<Node*, Node*> prev;
@@ -65,7 +69,7 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
                 Edge* edge = new Edge(adjacent, curr);
                 double edge_weight = edge->getEdgeWeight(); // get edge between current and adjacent
                 //std::cout << edge_weight << std::endl;
-                if (dist[adjacent] < dist[curr] + edge_weight) { // changed to <
+                if (dist[adjacent] > dist[curr] + edge_weight) { // changed to <
                     std::cout << "hello";
                     dist[adjacent] = dist[curr] + edge_weight;
                     pq.push(std::make_pair(dist[adjacent], adjacent));
@@ -90,9 +94,11 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
     //     std::cout << dist[i].second << std::endl;
     // }
 
-    // for (std::pair<Node *, double> node : dist) {
-    //     std::cout << node.second << std::endl;
-    // }
+    for (std::pair<Node*, double> node : dist) {
+        std::cout << "\"";
+        std::cout << node.first->getName() << std::endl << node.second << std::endl;
+    }
+
     return path;
 }
 
