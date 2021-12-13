@@ -19,16 +19,8 @@
 <h3 align="center">Traversing DisneyWorld</h3>
 
   <p align="center">
-    We are using the unofficial API library called wdwJS -- ​​https://github.com/zpocbob/wdwJS. The dataset provides information about various rides in Disney Theme Parks around the world, such as Disney California and Disney Paris. This information includes the individual ride wait times, the schedule for these rides, and which park the ride is located in. We downloaded our data by pulling from the github repository that it was in. We used BFS to work with our dataset because of its queue structure, and are specifically using it to calculate the shortest distance between where the user is and where they would like to be. As for our graph algorithms, we chose to use Djikastra's Algorithm, as well as Kruskal's Algorithm. We used Djikastra's Algorithm to calculate the shortest point between two locations. We used Kruskal's Algorithm to generate the maximum amount of rides that a user can ride within their time contraint, and generate a landmark path for them.
-    <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
-    <br />
-    <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    For our final project, we chose to work with a dataset which includes data about various rides in Disney parks around the wworld, ranging fron Disneyland California to Disney Paris. We worked over the course of roughly a month to create a tool that calculates the optimal path through the park given a time constraint. We defined the optimal path as the path where the user could go on the most rides in the least amount of time. We also used the wait time for each ride to calculate the path. We used BFS to work with our dataset, and Djikastra's Algorithm as well as Kruskal's Algorithm as our graph algorithm.
+    
   </p>
 </div>
 
@@ -70,6 +62,10 @@ We are using the unofficial API library called wdwJS -- ​​https://github.com
 <!-- GETTING STARTED -->
 ## Installation
 To get a local version of our project, follow these simple instructions.
+Run 
+```sh
+  git clone https://github-dev.cs.illinois.edu/cs225-fa21/snema2-ag52-knagpu2-shreyap7.git
+``` 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -87,7 +83,7 @@ Our dataset is
 
 <!-- USAGE EXAMPLES -->
 ## Features
-Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. One key feature of our tool is that () Another key feature of our tool is ()
+Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. One key feature of our tool is that  Another key feature of our tool is ()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

@@ -217,14 +217,15 @@ TEST_CASE("Check to see if graph gets updated after adding nodes and edges with 
 
 TEST_CASE("Check to see if isAdjacent works correctly.") {
   Graph * graph = Graph::readCSV("tests/test_disney_data.csv");
-  
+  graph->addNode(1, 34.5, 30.5, "Ride 2");
+
   std::vector<Node*> nodes;
   for (pair<string, Node*> n1 : graph->getNodes()) {
       nodes.push_back(n1.second);
   }
 
-  std::vector<Edge*> adjEdges = nodes[1]->getAdjacentEdges();
-  REQUIRE( graph->isAdjacent(nodes[0], nodes[1]) );
+  REQUIRE( graph->isAdjacent(nodes[1], nodes[2]) );
+  REQUIRE( !( graph->isAdjacent(nodes[0], nodes[nodes.size()-1]) ) );
 }
 
 // ========================================================================
