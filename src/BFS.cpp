@@ -1,20 +1,21 @@
 #include "BFS.h"
 
-#include <queue>
-#include <vector>
+
 
 //skeleton of BFS graph traversal
 
-void BFS::BFS() {
+BFS::BFS() {
     //Input: Graph, G
     //Output: A labeling of the edges on G as discovery and cross edges
 }
-void BFS::BFS(const Graph& other) {
+
+BFS::BFS(const Graph& other) {
     _copy(other);
 }
-void BFS::bfsTraversal() {
-    int fileRow = 0; //number of rows in the disney_data
-    ifstream file("data/disney_data.csv");
+
+void BFS::bfsTraversal(std::string path) {
+    int fileRow = 0; //number of rows in the data
+    ifstream file(path);
     String line;
     while( getline(file, line) ) {
         fileRow++
@@ -37,7 +38,7 @@ void BFS::bfsTraversal() {
         }
     }
 }
-void Graph::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nodeExplore, int vertex) {
+void BFS::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nodeExplore, int vertex) {
     queue<int> q;
     nodeExplore[Node*] = true; //vertex
     bfsVertexList.push_back(Node*);
