@@ -1,10 +1,4 @@
-#include <queue>
-#include <utility>
-#include <map>
-#include <functional>
-#include <sstream>
-#include <string>
-#include <iostream>
+
 
 #include "dijkstras.h"
 
@@ -35,7 +29,7 @@
 //     }
 // }
 
-std::vector<Edge> Dijkstras::Dijkstras_Helper(Node* a, Graph* g) {
+std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a, Graph* g) {
     //Definitions
     const int INF;
     double distance;
@@ -92,7 +86,7 @@ std::vector<Edge> Dijkstras::Dijkstras_Helper(Node* a, Graph* g) {
     }
 
     //Extracts shortest path from previous map
-    // std::vector<Node*> path;
+    std::vector<Node*> path;
 
     // double weight = 0;
 
@@ -101,13 +95,11 @@ std::vector<Edge> Dijkstras::Dijkstras_Helper(Node* a, Graph* g) {
     //     std::vector<Edge>::iterator it = path.begin();
     //     it = path.insert(it, Edge(prev[curr], curr, weight, prev[curr] + "-" + curr));
     // }
-    // for (unsigned i = 0; i < path.size(); ++i) {
-    //     std::cout<<path[i].getLabel()<<endl;
-    // }
+    
     return path;
 }
 
-std::vector<Edge> runDijkstras(std::string name, Node* a, Node* b) {
+std::vector<Node*> runDijkstras(std::string name, Node* a, Node* b) {
     Dijkstras dijkstras = Dijkstras(data);
     int fileRow = 0; //number of rows in the data
     ifstream file(name);

@@ -3,6 +3,13 @@
 #include <vector>
 #include <algorithm>
 #include <string>
+#include <queue>
+#include <utility>
+#include <map>
+#include <functional>
+#include <sstream>
+#include <string>
+#include <iostream>
 
 #include "graph.h"
 #include "edge.h"
@@ -14,10 +21,10 @@ class Dijkstras {
         //Dijkstras(std::vector<std::vector<std::string>> data);
 
         //Returns a vector of edges that represents the shortest path from Vertex a to b
-        std::vector<Edge> Dijkstras_Helper(Node* a, Node* b);
+        std::vector<Node*> Dijkstras_Helper(Node* a, Node* b);
 
         //Main Dijkstras function, condenses the helper functions
-        std::vector<Edge> runDijkstras(std::vector<std::vector<std::string>> data, Node* a, Node* b);
+        std::vector<Node*> runDijkstras(std::string name, Node* a, Node* b);
 
         //Graph getter
         //Graph getGraph();
