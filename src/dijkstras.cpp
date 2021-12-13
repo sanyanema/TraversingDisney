@@ -16,6 +16,7 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
 
     for (std::pair<std::string, Node*> node : map) {
         nodes.push_back(node.second);
+        //std::cout << node.second->getName() << std::endl;
     }
    
     std::unordered_map<Node*, double> dist; // this is a dist array that specifically maps from a Node to its distance from Node A
@@ -42,28 +43,34 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
 
     // Loops through the priority queue until it is empty. 
     while (!pq.empty()) {
-        Node* current = pq.top().second; // to access the Node of the pair
+        //std::cout << "dist[i].second" << std::endl;
+        //Node* current = pq.top().second; // to access the Node of the pair
+        Node* curr = graph->getNode(pq.top().second->getName());
+        std::cout << curr->getName() << std::endl;
         pq.pop(); // after accessing, pop this value
 
         // Get access to only the adjacent nodes of this particular node, since
         // we are only concerned with what is directly adjacent.
-        std::vector<Node*> adjacent_nodes = current->getAdjacentNodes();
+        std::vector<Node*> adjacent_nodes = curr->getAdjacentNodes();
+        std::cout << adjacent_nodes.size() << std::endl;
 
         for (unsigned v = 0; v < adjacent_nodes.size(); ++v) {
             if (visited[adjacent_nodes[v]]) { // this means it has already been visited, distance has been decided
+                
                 continue;
             }
             else {
                 Node* adjacent = adjacent_nodes[v];
-                Edge* edge = new Edge(adjacent, current);
+                Edge* edge = new Edge(adjacent, curr);
                 double edge_weight = edge->getEdgeWeight(); // get edge between current and adjacent
-                if (dist[adjacent] > dist[current] + edge_weight) {
-                    dist[adjacent] = dist[current] + edge_weight;
+                std::cout << edge_weight << std::endl;
+                if (dist[adjacent] > dist[curr] + edge_weight) {
+                    dist[adjacent] = dist[curr] + edge_weight;
                     pq.push(std::make_pair(dist[adjacent], adjacent));
                 }
             }
         }
-        visited[current] = true;
+        visited[curr] = true;
     }
 
     //Extracts shortest path from previous map
@@ -79,6 +86,10 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
     
     // for (unsigned i = 0; i < dist.size(); i++) {
     //     std::cout << dist[i].second << std::endl;
+    // }
+
+    // for (std::pair<Node *, double> node : dist) {
+    //     std::cout << node.second << std::endl;
     // }
     return path;
 }

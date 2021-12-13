@@ -9,57 +9,57 @@ BFS::BFS() {
 }
 
 void BFS::bfsTraversal(std::string path) {
-    int fileRow = 0; //number of rows in the data
-    std::ifstream file(path);
-    std::string line;
-    while( getline(file, line) ) {
-        fileRow++;
-    }
-    std::vector<bool> nodeExplore(fileRow);   //node_count_
-    //bfs checks row by row
-    std::vector<bool> t;
-    std::vector<std::vector<bool>> edgeExploredList;
-    nodeRows(fileRow);
+    // int fileRow = 0; //number of rows in the data
+    // std::ifstream file(path);
+    // std::string line;
+    // while( getline(file, line) ) {
+    //     fileRow++;
+    // }
+    // std::vector<bool> nodeExplore(fileRow);   //node_count_
+    // //bfs checks row by row
+    // std::vector<bool> t;
+    // std::vector<std::vector<bool>> edgeExploredList;
+    // //nodeRows(fileRow);
 
-    for(int i = 0;i < fileRow; i++) {
-        edgeExploredList.push_back(nodeRows);
-    }
-    //Nodes not explored yet
-    for (int i=0; i < fileRow; i++) {
-        if (!nodeExplore[i]) {
-            bfsTraversal(edgeExploredList, nodeExplore, i);
-            //need a count for all connected components 
-            //connected_components++; ?????
-        }
-    }
+    // for(int i = 0;i < fileRow; i++) {
+    //     //edgeExploredList.push_back(nodeRows);
+    // }
+    // //Nodes not explored yet
+    // for (int i=0; i < fileRow; i++) {
+    //     if (!nodeExplore[i]) {
+    //         bfsTraversal(edgeExploredList, nodeExplore, i);
+    //         //need a count for all connected components 
+    //         //connected_components++; ?????
+    //     }
+    // }
 }
 void BFS::bfsTraversal(std::vector<std::vector<bool>> &edgeExploredList, std::vector<bool> &nodeExplore, int Node) {
-    std::queue<int> q;
-    nodeExplore[Node] = true; //vertex
-    bfsVertexList.push_back(Node);
-    q.push(Node); //(vertex)
+    // std::queue<int> q;
+    // nodeExplore[Node] = true; //vertex
+    // bfsVertexList.push_back(Node);
+    // q.push(Node); //(vertex)
 
-    //^above don't necessarily know what should be inside the () and []
+    // //^above don't necessarily know what should be inside the () and []
 
-    while (!q.empty()) {
-        int frontNode = q.front();
-        q.pop();
-        for(int col = 0; col < fileRow; col++) {
-            if (adjList[frontNode][col]) {  //adj_list_ dont know what to call in this
-                if(!nodeExplore[col]) { //geekforgeek if(!visited[*i])
-                    edgeExploredList[frontNode][col] = true;
-                    bfsEdgeList.pushback(std::pair<int, int>(frontNode, col));
-                    nodeExplore[col] = true;    //geekforgeek
-                    bfsVertexList.push_back(col);
-                    //queue.push_back(*i)
-                    q.push(col);
-                } else if (!edgeExploredList[frontNode][col]) {
-                    edgeExploredList[frontNode][col] = true;
-                    bfsEdgeList.pushback(std::pair<int, int>(frontNode, col));
-                }
-            }
-        }
-    }
+    // while (!q.empty()) {
+    //     int frontNode = q.front();
+    //     q.pop();
+    //     for(int col = 0; col < fileRow; col++) {
+    //         if (adjList[frontNode][col]) {  //adj_list_ dont know what to call in this
+    //             if(!nodeExplore[col]) { //geekforgeek if(!visited[*i])
+    //                 edgeExploredList[frontNode][col] = true;
+    //                 bfsEdgeList.pushback(std::pair<int, int>(frontNode, col));
+    //                 nodeExplore[col] = true;    //geekforgeek
+    //                 bfsVertexList.push_back(col);
+    //                 //queue.push_back(*i)
+    //                 q.push(col);
+    //             } else if (!edgeExploredList[frontNode][col]) {
+    //                 edgeExploredList[frontNode][col] = true;
+    //                 bfsEdgeList.pushback(std::pair<int, int>(frontNode, col));
+    //             }
+    //         }
+    //     }
+    // }
 }
 
 /**
