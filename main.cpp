@@ -14,15 +14,15 @@ int main() {
 
     // BFS Algorithm
     //BFS * bfs = new BFS();
-    //bfs.bfsTraversal("data/disney_data.csv");
+    //bfs->bfsTraversal("data/disney_data.csv");
     // Need to save this output into a .txt file
 
     // Djikstra's Algorithm
     Dijkstras dji(graph);
     //Prince Charming Regal Carrousel,TRUE,5,Operating,-81.581255,28.420169
 
-    Node* node = new Node(5, -81.581255, 28.420169, "Prince Charming Regal Carrousel");
-    dji.Dijkstras_Helper(node);
+    //Node* node = new Node(5, -81.581255, 28.420169, "Prince Charming Regal Carrousel");
+    //dji.Dijkstras_Helper(node);
 
     // std::ofstream outfile;
     // outfile.open("djikstras_output.txt");
