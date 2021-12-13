@@ -19,7 +19,7 @@
 <h3 align="center">Traversing DisneyWorld</h3>
 
   <p align="center">
-    For our final project, we chose to work with a dataset which includes data about various rides in Disney parks around the wworld, ranging fron Disneyland California to Disney Paris. We worked over the course of roughly a month to create a tool that calculates the optimal path through the park given a time constraint. We defined the optimal path as the path where the user could go on the most rides in the least amount of time. We also used the wait time for each ride to calculate the path. We used BFS to work with our dataset, and Djikastra's Algorithm as well as Kruskal's Algorithm as our graph algorith.
+    For our final project, we chose to work with a dataset which includes data about various rides in Disney parks around the wworld, ranging fron Disneyland California to Disney Paris. We worked over the course of roughly a month to create a tool that calculates the optimal path through the park given a time constraint. We defined the optimal path as the path where the user could go on the most rides in the least amount of time. We also used the wait time for each ride to calculate the path. We used BFS to work with our dataset, and Djikastra's Algorithm as well as Kruskal's Algorithm as our graph algorithm.
     
   </p>
 </div>
@@ -62,7 +62,9 @@ We are using the unofficial API library called wdwJS -- ​​https://github.com
 <!-- GETTING STARTED -->
 ## Installation
 To get a local version of our project, follow these simple instructions.
-Run git clone "https://github-dev.cs.illinois.edu/cs225-fa21/snema2-ag52-knagpu2-shreyap7.git"
+Run ```sh
+   git clone https://github-dev.cs.illinois.edu/cs225-fa21/snema2-ag52-knagpu2-shreyap7.git
+   ``` 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
