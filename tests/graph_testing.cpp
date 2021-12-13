@@ -217,14 +217,15 @@ TEST_CASE("Check to see if graph gets updated after adding nodes and edges with 
 
 TEST_CASE("Check to see if isAdjacent works correctly.") {
   Graph * graph = Graph::readCSV("tests/test_disney_data.csv");
-  
+  graph->addNode(1, 34.5, 30.5, "Ride 2");
+
   std::vector<Node*> nodes;
   for (pair<string, Node*> n1 : graph->getNodes()) {
       nodes.push_back(n1.second);
   }
 
-  std::vector<Edge*> adjEdges = nodes[1]->getAdjacentEdges();
-  REQUIRE( graph->isAdjacent(nodes[0], nodes[1]) );
+  REQUIRE( graph->isAdjacent(nodes[1], nodes[2]) );
+  REQUIRE( !( graph->isAdjacent(nodes[0], nodes[nodes.size()-1]) ) );
 }
 
 // ========================================================================
@@ -280,8 +281,18 @@ TEST_CASE("Check to see if the incident function allows for same ride") {
 
 // BFS Tests
 
+
+
+// ========================================================================
+// Test: Checking BFS Constructor for proper implementation
+// =======================================================================
+TEST_CASE("BFS Constructor Works") {
+
+}
+
 TEST_CASE("BFS maintains the correct point on top", "[weight=0][part=1][part=1b]") {
-  //PNG png(40, 40);
+
+//PNG png(40, 40);
 //   Point startPoint(20, 20);
 //   BFS bfs(png, startPoint, 0.2);
 
@@ -308,10 +319,6 @@ TEST_CASE("BFS maintains the BFS ordering", "[weight=0][part=1][part=1b]") {
 }
 
 TEST_CASE("Produces the correct BFS for the entire dataset") {
-
-}
-
-TEST_CASE("BFS Constructor Works") {
 
 }
 
