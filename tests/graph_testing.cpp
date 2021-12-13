@@ -97,29 +97,26 @@ TEST_CASE("Check to see if graph addNode works correctly.") {
 
   graph->addNode(1, 81.5, 80.5, "Ride");
   int numNodes = graph->getNodes().size();
-  //std::unordered_map<string, Node*> nodes_ = graph->getNodes();
 
-
-  unordered_map<string, Node*> map = graph->getNodes();
   std::vector<Node*> nodes;
-  for (pair<string, Node*> n1 : map) {
+  for (pair<string, Node*> n1 : graph->getNodes()) {
         // add each to a vector
       nodes.push_back(n1.second);
         // after loop do above loop and then i can do indexing 
   }
 
   REQUIRE( numNodes == rows );
-  REQUIRE( nodes[numNodes - 1]->getWaitTime() == 1 );
-  REQUIRE( nodes[numNodes - 1]->getLatitude() == 81.5 );
-  REQUIRE( nodes[numNodes - 1]->getLongitude() == 80.5 );
-  REQUIRE( nodes[numNodes - 1]->getName() == "Ride" );
+  REQUIRE( nodes[0]->getWaitTime() == 1 );
+  REQUIRE( nodes[0]->getLatitude() == 81.5 );
+  REQUIRE( nodes[0]->getLongitude() == 80.5 );
+  REQUIRE( nodes[0]->getName() == "Ride" );
 }
 
 // ========================================================================
-// Test: addEdge with weight
+// Test: addEdge
 // ========================================================================
 
-TEST_CASE("Check to see if graph gets .") {
+TEST_CASE("Check to see if graph gets ..") {
   int rows = 0;
   ifstream file("tests/test_disney_data.csv");
   string line;
@@ -128,30 +125,111 @@ TEST_CASE("Check to see if graph gets .") {
   while( getline(file, line) )
     rows++;
 
-  Node* first = new Node(1, 81.5, 80.5, "Ride");
-  Node* second = new Node(1, 34.5, 30.5, "Ride 2");
-  Edge* edge = new Edge(first, second);
   graph->addNode(1, 81.5, 80.5, "Ride");
-  int numNodes = graph->getNodes().size();
-  //std::unordered_map<string, Node*> nodes_ = graph->getNodes();
+  graph->addNode(1, 34.5, 30.5, "Ride 2");
 
-
-  unordered_map<string, Node*> map = graph->getNodes();
   std::vector<Node*> nodes;
-  for (pair<string, Node*> n1 : map) {
+  for (pair<string, Node*> n1 : graph->getNodes()) {
         // add each to a vector
       nodes.push_back(n1.second);
         // after loop do above loop and then i can do indexing 
   }
+  
+  graph->addEdge(nodes[0], nodes[1]);
+  std::vector<Edge*> edges = graph->getEdges();
+  int numEdges = graph->getEdges().size();
+  int expectedNumNodes = rows - 1;
+  int expectedNumEdges = expectedNumNodes * (expectedNumNodes - 1) / 2 + expectedNumNodes + 1;
 
-  REQUIRE( numNodes == rows );
-  REQUIRE( nodes[numNodes - 1]->getWaitTime() == 1 );
-  REQUIRE( nodes[numNodes - 1]->getLatitude() == 81.5 );
-  REQUIRE( nodes[numNodes - 1]->getLongitude() == 80.5 );
-  REQUIRE( nodes[numNodes - 1]->getName() == "Ride" );
+  REQUIRE( numEdges == expectedNumEdges );
+
+  //tests adjacent edges of second node
+  std::vector<Edge*> adjEdges = nodes[0]->getAdjacentEdges();
+  REQUIRE( adjEdges[0]->getFirstNode()->getWaitTime() == edges[numEdges-1]->getFirstNode()->getWaitTime() );
+  REQUIRE( adjEdges[0]->getFirstNode()->getLatitude() == edges[numEdges-1]->getFirstNode()->getLatitude() );
+  REQUIRE( adjEdges[0]->getFirstNode()->getLongitude() == edges[numEdges-1]->getFirstNode()->getLongitude() );
+  REQUIRE( adjEdges[0]->getFirstNode()->getName() == edges[numEdges-1]->getFirstNode()->getName() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getWaitTime() == edges[numEdges-1]->getSecondNode()->getWaitTime() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getLatitude() == edges[numEdges-1]->getSecondNode()->getLatitude() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getLongitude() == edges[numEdges-1]->getSecondNode()->getLongitude() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getName() == edges[numEdges-1]->getSecondNode()->getName() );
+  REQUIRE( adjEdges[0]->getEdgeWeight() == edges[numEdges-1]->calculateDistance() );
+
+  //tests adjacent edge of first node
+  std::vector<Node*> adjNodes = nodes[1]->getAdjacentNodes();
+  REQUIRE( adjNodes[0]->getWaitTime() == 1 );
+  REQUIRE( adjNodes[0]->getLatitude() == 34.5 );
+  REQUIRE( adjNodes[0]->getLongitude() == 30.5 );
+  REQUIRE( adjNodes[0]->getName() == "Ride 2" );
 }
 
-// Latitude-Longitude Distance Function Tests
+// ========================================================================
+// Test: addEdge with weight
+// ========================================================================
+
+TEST_CASE("Check to see if graph gets ...") {
+  int rows = 0;
+  ifstream file("tests/test_disney_data.csv");
+  string line;
+  Graph * graph = Graph::readCSV("tests/test_disney_data.csv");
+  
+  while( getline(file, line) )
+    rows++;
+
+  graph->addNode(1, 81.5, 80.5, "Ride");
+  graph->addNode(1, 34.5, 30.5, "Ride 2");
+
+  std::vector<Node*> nodes;
+  for (pair<string, Node*> n1 : graph->getNodes()) {
+      nodes.push_back(n1.second);
+  }
+  
+  graph->addEdge(nodes[0], nodes[1], 5);
+  int numEdges = graph->getEdges().size();
+  int expectedNumNodes = rows - 1;
+  int expectedNumEdges = expectedNumNodes * (expectedNumNodes - 1) / 2 + expectedNumNodes + 1;
+
+  REQUIRE( numEdges == expectedNumEdges );
+
+  //tests adjacent edges of first node
+  std::vector<Edge*> adjEdges = nodes[1]->getAdjacentEdges();
+  REQUIRE( adjEdges[0]->getFirstNode()->getWaitTime() == nodes[0]->getWaitTime() );
+  REQUIRE( adjEdges[0]->getFirstNode()->getLatitude() == nodes[0]->getLatitude() );
+  REQUIRE( adjEdges[0]->getFirstNode()->getLongitude() == nodes[0]->getLongitude() );
+  REQUIRE( adjEdges[0]->getFirstNode()->getName() == nodes[0]->getName() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getWaitTime() == nodes[1]->getWaitTime() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getLatitude() == nodes[1]->getLatitude() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getLongitude() == nodes[1]->getLongitude() );
+  REQUIRE( adjEdges[0]->getSecondNode()->getName() == nodes[1]->getName() );
+  REQUIRE( adjEdges[0]->getEdgeWeight() == 5 );
+
+  //tests adjacent edge of second node
+  std::vector<Node*> adjNodes = nodes[0]->getAdjacentNodes();
+  REQUIRE( adjNodes[0]->getWaitTime() == 1 );
+  REQUIRE( adjNodes[0]->getLatitude() == 81.5 );
+  REQUIRE( adjNodes[0]->getLongitude() == 80.5 );
+  REQUIRE( adjNodes[0]->getName() == "Ride" );
+}
+
+// ========================================================================
+// Test: isAdjacent
+// ========================================================================
+
+TEST_CASE("Check to see if graph gets ....") {
+  Graph * graph = Graph::readCSV("tests/test_disney_data.csv");
+  
+  std::vector<Node*> nodes;
+  for (pair<string, Node*> n1 : graph->getNodes()) {
+      nodes.push_back(n1.second);
+  }
+
+  std::vector<Edge*> adjEdges = nodes[1]->getAdjacentEdges();
+  REQUIRE( graph->isAdjacent(nodes[0], nodes[1]) );
+}
+
+// ========================================================================
+// Test: Checking Latitude-Longitude Distance Function Tests
+// ========================================================================
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
   Node* first = new Node(1, 81.5, 80.5, "Ride");
   Node* second = new Node(1, 34.5, 30.5, "Ride 2");
@@ -187,11 +265,6 @@ TEST_CASE("Check to see if distance function produces the correct value - Using 
 
   REQUIRE ( Approx(distance).epsilon(0.01) == 0.3186387535 );
 }
-// ========================================================================
-// Test: Checking incident of edges going a ride again
-// ========================================================================
-
-
 
 // ========================================================================
 // Test: Checking incident of edges going a ride again
@@ -203,10 +276,6 @@ TEST_CASE("Check to see if the incident function allows for same ride") {
   Edge* edge = new Edge(first, second);
 
   REQUIRE (first->getName() == second->getName());
-
-  /**
-
-  */
 }
 
 // BFS Tests
