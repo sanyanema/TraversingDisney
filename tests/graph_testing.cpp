@@ -151,7 +151,9 @@ TEST_CASE("Check to see if graph gets .") {
   REQUIRE( nodes[numNodes - 1]->getName() == "Ride" );
 }
 
-// Latitude-Longitude Distance Function Tests
+// ========================================================================
+// Test: Checking Latitude-Longitude Distance Function Tests
+// ========================================================================
 TEST_CASE("Check to see if distance function produces the correct value - Both Positive") {
   Node* first = new Node(1, 81.5, 80.5, "Ride");
   Node* second = new Node(1, 34.5, 30.5, "Ride 2");
@@ -187,11 +189,6 @@ TEST_CASE("Check to see if distance function produces the correct value - Using 
 
   REQUIRE ( Approx(distance).epsilon(0.01) == 0.3186387535 );
 }
-// ========================================================================
-// Test: Checking incident of edges going a ride again
-// ========================================================================
-
-
 
 // ========================================================================
 // Test: Checking incident of edges going a ride again
