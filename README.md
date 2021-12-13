@@ -37,7 +37,7 @@
       <a href="#installation">Installation</a>
     </li>
     <li><a href="#dataset">Dataset</a></li>
-    <li><a href="#logic-and-testing">Logic and Testing</a></li>
+    <li><a href="#test-suite-and-testing">Test Suite and Testing</a></li>
     <li><a href="#features">Features</a></li>
   </ol>
 </details>
@@ -78,7 +78,7 @@ Our dataset is
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-### Logic And Testing
+### Test Suite and Testing
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -87,7 +87,7 @@ Our dataset is
 
 <!-- USAGE EXAMPLES -->
 ## Features
-Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. One key feature of our tool is that  Another key feature of our tool is ()
+Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. One key feature of our tool is that we find Another key feature of our tool is ()
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
