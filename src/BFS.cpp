@@ -15,10 +15,10 @@ void BFS::bfsTraversal(std::string path) {
     while( getline(file, line) ) {
         fileRow++
     }
-    vector<bool> nodeExplore(fileRow);   //node_count_
+    std::vector<bool> nodeExplore(fileRow);   //node_count_
     //bfs checks row by row
-    vector<bool> t;
-    vector<vector<bool>> edgeExploredList
+    std::vector<bool> t;
+    std::vector<std::vector<bool>> edgeExploredList;
     nodeRows(fileRow);
 
     for(int i = 0;i < fileRow; i++) {
@@ -33,8 +33,8 @@ void BFS::bfsTraversal(std::string path) {
         }
     }
 }
-void BFS::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nodeExplore, int Node) {
-    queue<int> q;
+void BFS::bfsTraversal(std::vector<std::vector<bool>> &edgeExploredList, std::vector<bool> &nodeExplore, int Node) {
+    std::queue<int> q;
     nodeExplore[Node] = true; //vertex
     bfsVertexList.push_back(Node);
     q.push(Node); //(vertex)

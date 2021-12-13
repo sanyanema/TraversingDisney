@@ -29,6 +29,8 @@
 //     }
 // }
 
+Dijikstras::Dijikstras() {}
+
 std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a, Graph* g) {
     //Definitions
     const int INF;
@@ -96,10 +98,13 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a, Graph* g) {
     //     it = path.insert(it, Edge(prev[curr], curr, weight, prev[curr] + "-" + curr));
     // }
     
+    for (unsigned i = 0; i < dist.size(); i++) {
+        std::cout << dist[i] << std::endl;
+    }
     return path;
 }
 
-std::vector<Node*> runDijkstras(std::string name, Node* a, Node* b) {
+std::vector<Node*> Djikstras::runDijkstras(std::string name, Node* a, Node* b) {
     Dijkstras dijkstras = Dijkstras(data);
     int fileRow = 0; //number of rows in the data
     ifstream file(name);
