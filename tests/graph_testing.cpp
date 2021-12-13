@@ -343,6 +343,10 @@ TEST_CASE("BFS path works") {
 
 // Dijikstra's Tests
 
+TEST_CASE("Check that the distance to the node passed in is 0") {
+  // make the graph and load it in, based on which node you pass in, get that node and see that the dist is 0 there
+}
+
 TEST_CASE("Check to see if all the edge weights are non-negative") {
 
 }
