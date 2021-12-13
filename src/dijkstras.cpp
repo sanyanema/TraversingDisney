@@ -46,13 +46,13 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
         //std::cout << "dist[i].second" << std::endl;
         //Node* current = pq.top().second; // to access the Node of the pair
         Node* curr = graph->getNode(pq.top().second->getName());
-        std::cout << curr->getName() << std::endl;
+        //std::cout << curr->getName() << std::endl;
         pq.pop(); // after accessing, pop this value
 
         // Get access to only the adjacent nodes of this particular node, since
         // we are only concerned with what is directly adjacent.
         std::vector<Node*> adjacent_nodes = curr->getAdjacentNodes();
-        std::cout << adjacent_nodes.size() << std::endl;
+        //std::cout << adjacent_nodes.size() << std::endl;
 
         for (unsigned v = 0; v < adjacent_nodes.size(); ++v) {
             if (visited[adjacent_nodes[v]]) { // this means it has already been visited, distance has been decided
@@ -61,10 +61,12 @@ std::vector<Node*> Dijkstras::Dijkstras_Helper(Node* a) {
             }
             else {
                 Node* adjacent = adjacent_nodes[v];
+                //std::cout << adjacent->getName();
                 Edge* edge = new Edge(adjacent, curr);
                 double edge_weight = edge->getEdgeWeight(); // get edge between current and adjacent
-                std::cout << edge_weight << std::endl;
-                if (dist[adjacent] > dist[curr] + edge_weight) {
+                //std::cout << edge_weight << std::endl;
+                if (dist[adjacent] < dist[curr] + edge_weight) { // changed to <
+                    std::cout << "hello";
                     dist[adjacent] = dist[curr] + edge_weight;
                     pq.push(std::make_pair(dist[adjacent], adjacent));
                 }
