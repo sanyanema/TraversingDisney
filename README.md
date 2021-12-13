@@ -74,6 +74,9 @@ To make the prject after you have cloned it, run
   make
   ./project
 ``` 
+In the 
+```sh main.cpp```, we pass in the dataset as a filename and our output location is 3 ```sh .txt``` files, one for each of the algorithms.
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
