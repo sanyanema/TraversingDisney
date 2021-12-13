@@ -8,7 +8,7 @@
 #include "edge.h"
 
 //skeleton of kruskal's header
-class kruskals {
+class Kruskals {
     public:
     private:
 };

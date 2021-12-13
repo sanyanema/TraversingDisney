@@ -15,7 +15,7 @@ class BFS {
         BFS();
         BFS(const Graph& other);
         void bfsTraversal(std::string path); 
-        void bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nodeExplore, int vertex);
+        void bfsTraversal(std::vector<std::vector<bool>> &edgeExploredList, std::vector<bool> &nodeExplore, int vertex);
     private:
         // possibly make a variable for explored nodes
         
