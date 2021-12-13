@@ -11,18 +11,18 @@
 class Dijkstras {
     public:
         //Constructor that creates a graph from the dataset of connected users
-        Dijkstras(std::vector<std::vector<std::string>> data);
+        //Dijkstras(std::vector<std::vector<std::string>> data);
 
         //Returns a vector of edges that represents the shortest path from Vertex a to b
-        std::vector<Edge> Dijkstras_Helper(Vertex a, Vertex b);
+        std::vector<Edge> Dijkstras_Helper(Node* a, Node* b);
 
         //Main Dijkstras function, condenses the helper functions
-        std::vector<Edge> runDijkstras(std::vector<std::vector<std::string>> data, Vertex a, Vertex b);
+        std::vector<Edge> runDijkstras(std::vector<std::vector<std::string>> data, Node* a, Node* b);
 
         //Graph getter
-        Graph getGraph();
+        //Graph getGraph();
 
         std::vector<Node*> getActualPath();
     private:
-        Graph g_;
+        //Graph g_;
 };
