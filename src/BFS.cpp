@@ -2,6 +2,7 @@
 
 
 
+
 //skeleton of BFS graph traversal
 
 BFS::BFS() {
@@ -47,18 +48,17 @@ void BFS::bfsTraversal(vector<vector<bool>> &edgeExploredList, vector<bool> &nod
     while (!q.empty()) {
         int frontNode = q.front();
         q.pop();
-
         for(int col = 0; col < fileRow; col++) {
-            if (adjList[frontVertex][col]) {  //adj_list_ dont know what to call in this
+            if (adjList[frontNode][col]) {  //adj_list_ dont know what to call in this
                 if(!nodeExplore[col]) {
-                    edgeExploredList[frontVertex][col] = true;
-                    bfsEdgeList.pushback(std::pair<int, int>(frontVertex, col));
+                    edgeExploredList[frontNode][col] = true;
+                    bfsEdgeList.pushback(std::pair<int, int>(frontNode, col));
                     nodeExplore[col] = true;
                     bfsVertexList.push_back(col);
                     q.push(col);
-                } else if (!edgeExploredList[frontVertex][col]) {
-                    edgeExploredList[frontVertex][col] = true;
-                    bfsEdgeList.pushback(std::pair<int, int>(frontVertex, col));
+                } else if (!edgeExploredList[frontNode][col]) {
+                    edgeExploredList[frontNode][col] = true;
+                    bfsEdgeList.pushback(std::pair<int, int>(frontNode, col));
                 }
             }
         }
