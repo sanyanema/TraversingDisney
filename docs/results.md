@@ -18,7 +18,7 @@ We used Dijikstra’s Shortest Path algorithm to identify the shortest weighted 
 
 The options for weighting scheme are as follows:
 
-Runtime Complexity:
+Runtime Complexity: O(E*log(V)), where E is the number of edges and V are the number of nodes 
 
 ## Kruskal's 
 Kruskal’s also generates the shortest path given a specific starting node, however it attempts to provide the rider with the greatest number of rides while maintaining the shortest path. The use case for this is to generate a path that not only takes the least amount of time/distance, but also allows the rider to visit most of Disneyworld.

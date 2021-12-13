@@ -296,7 +296,7 @@ TEST_CASE("BFS Traversal ") {
 // Test: BFS with name of rides
 // ========================================================================
 TEST_CASE("Checking BFS Iterator") {
-  std::cout << "Reading through graph" << std::endl;
+  // std::cout << "Reading through graph" << std::endl;
   Graph g = test.getGraph()
   int numNodes = graph->getNodes().size();
   int numEdges = graph->getEdges().size();
@@ -342,6 +342,10 @@ TEST_CASE("BFS path works") {
 }
 
 // Dijikstra's Tests
+
+TEST_CASE("Check that the distance to the node passed in is 0") {
+  // make the graph and load it in, based on which node you pass in, get that node and see that the dist is 0 there
+}
 
 TEST_CASE("Check to see if all the edge weights are non-negative") {
 
