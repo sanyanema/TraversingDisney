@@ -6,127 +6,66 @@
 
 //skeleton of BFS graph traversal
 
+void BFS::BFS() {
+    //Input: Graph, G
+    //Output: A labeling of the edges on G as discovery and cross edges
+}
+void BFS::BFS(const Graph& other) {
+    _copy(other);
+}
+void BFS:bfsTraversal() {
+    vector<bool> nodeExplore(nodeCount);
+    //bfs checks row by row
+    vector<bool> t;
+    vector<vector<bool>> edgeExploredList
+    nodeRows(nodeCount);
 
-/* constructor - takes in # of vertices (nodes) and starting vertex */
-BFS::BFS(std::vector<Node*> v, Node* s) { //<vertex> v, Vertex s
-    for (Vertex i : v) {
-        nodes.push_back(i);
+    for(int i = 0;i < nodeCount; i++) {
+        edgeExploredList.push_back(nodeRows);
     }
-
-    adj = std::map<Vertex, std::vector<Vertex>>();
-
-    isVisited = std::map<Vertex, bool>();
-    for (Vertex i : vertices) {
-        isVisited[i] = false;
-    }
-    isVisited[s] = true;
-    queue.push(s);
-}
-
-/* second constructor - also takes in a vector of edges */
-BFS::BFS(std::vector<Vertex> v, std::vector<Edge> e, Vertex s) {
-    for (Vertex i : v) {
-        vertices.push_back(i);
-    }
-
-    adj = std::map<Vertex, std::vector<Vertex>>();
-    for (Edge j : e) {
-        adj[j.git ].push_back(j.dest);
-        adj[j.dest].push_back(j.source);
-    }
-
-    isVisited = std::map<Vertex, bool>();
-    for (Vertex i : vertices) {
-        isVisited[i] = false;
-    }
-    isVisited[s] = true;
-    queue.push(s);
-}
-
-/* destructor */
-BFS::~BFS() {
-    vertices.clear();
-    adj.clear();
-    queue.empty();
-    isVisited.clear();
-}
-
- /* helper function to add edge */
-void BFS::addEdge(Node* first, Node* second) { //Vertex v, Vertex w
-    adj[first].push_back(second);
-    adj[second].push_back(first);
-}
-
- /* helper function to add edge */
-void BFS::addEdge(Edge e) {
-    adj[e.source].push_back(e.dest);
-    adj[e.dest].push_back(e.source);
-}
-
-/* shows the node at the current top of the queue */
-Vertex BFS::front(){
-    return queue.front();
-}
-
-/* pops the top node of the queue */
-void BFS::pop() {
-    queue.pop();
-}
-
-/* conducts bfs traversal one step at a time, so you can get the top in between steps */
-Vertex BFS::nextVertex() {
-    std::list<int>::iterator i;
-
-    while (!queue.empty()) {
-        Vertex s = queue.front();
-
-        for (Vertex i : adj[s]) {
-            if (isVisited[i] == false) {
-                isVisited[i] = true;
-                queue.push(i);
-                return i;
-            }
-        }
-
-        queue.pop();
-    }
-
-    return NULL;
-}
-
-/* conducts the BFS traversal with starting node s */
-void BFS::start() {
-    std::list<int>::iterator i;
-
-    while (!queue.empty()) {
-        Vertex s = queue.front();
-        queue.pop();
-
-        for (Vertex i : adj[s]) {
-            if (isVisited[i] == false) {
-                isVisited[i] = true;
-                queue.push(i);
-            }
+    //Nodes not explored yet
+    for (int i=0; i < nodeCount; i++) {
+        if (!nodeExplore[i]) {
+            bfsTraversal(edgeExploredList, nodeExplore, i);
+            //need a count for all connected components 
+            //connected_components++; ?????
         }
     }
 }
+void Graph::bfsTraversal() {
+    queue<int> q;
+    nodeExplore[Node*] = true; //vertex
+    bfsVertexList.push_back(Node*);
+    q.push(Node*); //(vertex)
 
-/* functions for testing purposes exclusively */
-std::string BFS::printVertices() {
-    string toReturn = "";
-    for (Vertex v : vertices) {
-        //std::cout << v << " ";
-        toReturn += v + " ";
+    while (!q.empty()) {
+        int frontNode = q.front();
+        q.pop();
+
     }
-    return toReturn;
 }
 
-/* functions for testing purposes exclusively */
-std::string BFS::printEdges(Vertex v) {
-    string toReturn = "";
-    for (Vertex i : adj[v]) {
-        //std::cout << i << " ";
-        toReturn += v + " goes to " + i + " ";
-    }
-    return toReturn;
-}
+/**
+foreach (Vertex v : G.vertices()):
+        setLabel(v, UNEXPLORED)
+    foreach (Edge e : G.edges()):
+        setLabel(e, UNEXPLORED)
+    foreach (Vertex v : G.vertices()):
+        if getLabel(v) == UNEXPLORED:
+            BFS(G, v)
+
+BFS(G, v):
+    Queue q
+    setLabel(v, VISITED)
+    q.enqueue(v)
+    
+    while !q.empty():
+        v = q.dequeue()
+        foreach (Vertex w : G.adjacent(v)):
+            if getLabel(w) == UNEXPLORED:
+                setLabel(v, w, DISCOVERY)
+                setLabel(w, VISITED)
+                q.enqueue(w)
+            elseif getLabel(v, w) == UNEXPLORED:
+                setLabel(v, w, CROSS)
+*/
