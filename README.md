@@ -89,14 +89,14 @@ To test the code, run the following command
   make test
   ./test
 ``` 
-Our test suite includes tests for each algorithm we used, as well as the graph, edge, and node classes. 
+Our test suite includes tests for each algorithm we used, as well as the graph, edge, and node classes. We tested the addNode(), addEdges(), getNode(), and getCSV() functions. We also tested our destructors as well as our Lattitude and Longitude distance functions.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Features
-Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. One key feature of our tool is that we find Another key feature of our tool is ()
+Our main focus when builing this tool was to make sure that the user had an optimized DisneyWorld experience, which we defined as going on the most rides they could within their time contraint. The most important key feature of our tool is that we find the most optimized path around the Disneyworld park.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
