@@ -78,7 +78,8 @@ In the
 
 
 ### Dataset
-Our dataset is 
+We are using the unofficial API library called wdwJS -- ​​https://github.com/zpocbob/wdwJS. The dataset provides information about various rides in Disney Theme Parks around the world, such as Disney California and Disney Paris. This information includes the individual ride wait times, the schedule for these rides, and which park the ride is located in. We are hoping to solve the specific problem of amusement park goers having to wait in long lines. By tracking wait times and the distance away a person is from a certain ride we can allow them to figure out what theme park they should go to at a certain time. We are hoping to produce a search tool, where the input is the current location at the park, and the output will be a list of suggested rides ranked using shortest wait time, distance from rides, and the ability to optimize the future ride order. To us, a successful project looks like a working search tool that can help users optimize their amusement park experience. Based on the user’s location in the park, we want to be able to provide them with their ideal and most optimized experience based on their location and wait time. 
+
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
@@ -88,6 +89,7 @@ To test the code, run the following command
   make test
   ./test
 ``` 
+Our test suite includes tests for each algorithm we used, as well as the graph, edge, and node classes. 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
