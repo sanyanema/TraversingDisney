@@ -26,4 +26,5 @@ Kruskal’s also generates the shortest path given a specific starting node, how
 ** Add more as is implemented
 
 ## Discoveries
-We discovered that ...
+We discovered that the implementations of Djikstra's and Kruskal's algoithm and how it can be applicable to real life, and
+how it is so useful in terms of coming up with solutions such as how long it can take to get to a certain ride. We also learned how to work with a new and unexplored dataset and work with how the overall data can fit into a graph implementation. Often times, it is hard to piece together what CS applications can do in your daily life (or on vacation at Disneyworld) and writing this code base helped us discover this.
