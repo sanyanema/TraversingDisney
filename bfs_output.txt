@@ -1,0 +1,37 @@
+Name of Ride 	Under the Sea ~ Journey of The Little Mermaid->
+Name of Ride 	Enchanted Tales with Belle->
+Name of Ride 	Monsters Inc. Laugh Floor->
+Name of Ride 	Peter Pan's Flight->
+Name of Ride 	Liberty Square Riverboat->
+Name of Ride 	Tomorrowland Speedway->
+Name of Ride 	Splash Mountain->
+Name of Ride 	Seven Dwarfs Mine Train->
+Name of Ride 	Big Thunder Mountain Railroad->
+Name of Ride 	"Walt Disney World Railroad - Main Street U.S.A."->
+Name of Ride 	Dumbo the Flying Elephant->
+Name of Ride 	Cinderella Castle->
+Name of Ride 	The Barnstormer->
+Name of Ride 	Walt Disney's Enchanted Tiki Room->
+Name of Ride 	Frontierland Shootin' Arcade->
+Name of Ride 	Swiss Family Treehouse->
+Name of Ride 	Horses - Disney Animals->
+Name of Ride 	The Magic Carpets of Aladdin->
+Name of Ride 	The Many Adventures of Winnie the Pooh->
+Name of Ride 	Walt Disney's Carousel of Progress->
+Name of Ride 	Haunted Mansion->
+Name of Ride 	Mickey's PhilharMagic->
+Name of Ride 	Pirates of the Caribbean->
+Name of Ride 	The Hall of Presidents->
+Name of Ride 	"""it's a small world"""->
+Name of Ride 	Tom Sawyer Island->
+Name of Ride 	A Pirate's Adventure ~ Treasures of the Seven Seas->
+Name of Ride 	Jungle Cruise->
+Name of Ride 	Buzz Lightyear's Space Ranger Spin->
+Name of Ride 	Country Bear Jamboree->
+Name of Ride 	Casey Jr. Splash 'N' Soak Station->
+Name of Ride 	Walt Disney World Railroad - Frontierland->
+Name of Ride 	Astro Orbiter->
+Name of Ride 	Walt Disney World Railroad - Fantasyland->
+Name of Ride 	Space Mountain->
+Name of Ride 	Main Street Vehicles->
+Name of Ride 	Tomorrowland Transit Authority PeopleMover->
